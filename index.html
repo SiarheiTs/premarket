@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premarket Brief · 27.04.2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-0: #0a0b0d;
+  --bg-1: #111317;
+  --bg-2: #16191f;
+  --bg-3: #1d2128;
+  --line: #252a33;
+  --line-bright: #353c47;
+  --text-0: #f5f5f0;
+  --text-1: #c4c8d0;
+  --text-2: #7a818e;
+  --text-3: #4a4f5a;
+  --accent: #d4ff3a;
+  --accent-dim: #8aab1f;
+  --bull: #4ade80;
+  --bear: #f87171;
+  --warn: #fbbf24;
+  --neutral: #94a3b8;
+  --mixed: #c084fc;
+  --grid-gap: 1px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--bg-0);
+  color: var(--text-1);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 85% 0%, rgba(212, 255, 58, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 0% 100%, rgba(192, 132, 252, 0.03) 0%, transparent 40%),
+    var(--bg-0);
+}
+
+.serif { font-family: 'Fraunces', Georgia, serif; letter-spacing: -0.01em; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 32px 48px;
+}
+
+/* HEADER */
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+  gap: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 24px;
+}
+.header-left { display: flex; flex-direction: column; gap: 4px; }
+.brand {
+  font-size: 10px;
+  color: var(--text-3);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.brand-bar {
+  display: inline-block;
+  width: 24px; height: 1px;
+  background: var(--accent);
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.title {
+  font-family: 'Fraunces', serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--text-0);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.title em { font-style: italic; font-weight: 400; color: var(--accent); }
+
+.header-center {
+  font-family: 'Fraunces', serif;
+  font-size: 88px;
+  font-weight: 200;
+  color: var(--text-0);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  text-align: center;
+}
+.header-center .day {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-2);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: block;
+  margin-top: 4px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.header-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--text-2);
+}
+.header-right .blink {
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-right: 6px;
+  vertical-align: middle;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(212, 255, 58, 0.6); }
+  50% { opacity: 0.4; box-shadow: 0 0 0 6px rgba(212, 255, 58, 0); }
+}
+.header-right .live { color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; font-size: 10px; }
+.header-right .ts { color: var(--text-1); font-size: 14px; }
+
+/* HERO STRIP */
+.hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: var(--grid-gap);
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-bottom: 24px;
+}
+.hero-cell {
+  background: var(--bg-1);
+  padding: 24px 28px;
+  position: relative;
+  overflow: hidden;
+}
+.cell-label {
+  font-size: 10px;
+  color: var(--text-3);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cell-label::before {
+  content: '';
+  width: 4px; height: 4px;
+  background: var(--text-3);
+  display: inline-block;
+}
+
+.bias-card { display: flex; flex-direction: column; gap: 16px; }
+.bias-headline {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.bias-word {
+  font-family: 'Fraunces', serif;
+  font-size: 56px;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+  color: var(--mixed);
+  font-style: italic;
+}
+.bias-strength {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  border: 1px solid var(--line-bright);
+  padding: 4px 10px;
+  border-radius: 2px;
+  position: relative;
+  top: -8px;
+}
+.bias-strength.high { color: var(--accent); border-color: var(--accent-dim); }
+.bias-strength.medium { color: var(--warn); border-color: rgba(251, 191, 36, 0.4); }
+
+.bias-narrative {
+  color: var(--text-1);
+  font-size: 13px;
+  line-height: 1.7;
+  max-width: 56ch;
+}
+.bias-narrative strong { color: var(--text-0); font-weight: 500; }
+
+.macro-mini {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 24px;
+  align-content: start;
+}
+.macro-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed var(--line);
+}
+.macro-tk { color: var(--text-2); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+.macro-val { font-size: 14px; color: var(--text-0); font-weight: 500; }
+.macro-d { font-size: 10px; margin-left: 8px; }
+.up { color: var(--bull); }
+.down { color: var(--bear); }
+.flat { color: var(--text-2); }
+
+.regime-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.regime-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+}
+.regime-item:last-child { border-bottom: none; }
+.regime-item .k { color: var(--text-2); font-size: 11px; }
+.regime-item .v { color: var(--text-0); font-weight: 500; }
+.regime-tag {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+  background: rgba(74, 222, 128, 0.1);
+  color: var(--bull);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+}
+.regime-tag.warn { background: rgba(251, 191, 36, 0.08); color: var(--warn); border-color: rgba(251, 191, 36, 0.2); }
+
+/* MAIN GRID */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.section {
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  position: relative;
+}
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-2);
+}
+.section-title {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-0);
+  letter-spacing: -0.01em;
+}
+.section-title em { font-style: italic; color: var(--accent); }
+.section-meta { font-size: 10px; color: var(--text-3); letter-spacing: 0.2em; text-transform: uppercase; }
+
+.focus-table { width: 100%; border-collapse: collapse; }
+.focus-table tr { border-bottom: 1px solid var(--line); transition: background 0.15s; }
+.focus-table tr:last-child { border-bottom: none; }
+.focus-table tr:hover { background: var(--bg-2); }
+.focus-table td { padding: 16px 20px; vertical-align: middle; }
+.tk-cell { width: 140px; }
+.tk-symbol {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-0);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.tk-tag {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  padding: 2px 6px;
+  border-radius: 2px;
+  margin-top: 6px;
+}
+.tk-tag.long { background: rgba(74, 222, 128, 0.1); color: var(--bull); border: 1px solid rgba(74, 222, 128, 0.25); }
+.tk-tag.short { background: rgba(248, 113, 113, 0.1); color: var(--bear); border: 1px solid rgba(248, 113, 113, 0.25); }
+.tk-arrow { font-size: 14px; vertical-align: middle; margin-right: 4px; }
+
+.tk-driver {
+  color: var(--text-1);
+  font-size: 12px;
+  line-height: 1.55;
+}
+.tk-pct {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: right;
+  width: 90px;
+}
+
+.risks-list { padding: 8px 0; }
+.risk-item {
+  padding: 14px 20px;
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.risk-item:last-child { border-bottom: none; }
+.risk-num {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--accent);
+  font-style: italic;
+  line-height: 1;
+}
+.risk-title {
+  font-size: 12px;
+  color: var(--text-0);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+.risk-desc { color: var(--text-2); font-size: 11px; line-height: 1.55; }
+
+/* SPX LEVELS */
+.spx-strip {
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  margin-bottom: 24px;
+  padding: 24px 28px;
+}
+.spx-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.spx-title {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text-0);
+}
+.spx-title em { font-style: italic; color: var(--accent); }
+.spx-spot { display: flex; align-items: baseline; gap: 12px; }
+.spx-spot-label { font-size: 10px; color: var(--text-3); letter-spacing: 0.2em; text-transform: uppercase; }
+.spx-spot-val {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--text-0);
+  letter-spacing: -0.02em;
+}
+.spx-em { color: var(--text-2); font-size: 12px; margin-left: 8px; }
+
+.spx-ladder { display: grid; grid-template-columns: 1fr; gap: 0; }
+.lvl-row {
+  display: grid;
+  grid-template-columns: 80px 80px 1fr auto;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--line);
+  gap: 16px;
+}
+.lvl-row:last-child { border-bottom: none; }
+.lvl-tag {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+  text-align: center;
+}
+.lvl-tag.r { background: rgba(248, 113, 113, 0.08); color: var(--bear); border: 1px solid rgba(248, 113, 113, 0.2); }
+.lvl-tag.s { background: rgba(74, 222, 128, 0.08); color: var(--bull); border: 1px solid rgba(74, 222, 128, 0.2); }
+.lvl-tag.spot { background: var(--accent); color: var(--bg-0); font-weight: 700; }
+.lvl-tag.brk { background: rgba(248, 113, 113, 0.2); color: var(--bear); border: 1px solid rgba(248, 113, 113, 0.4); }
+.lvl-px {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-0);
+}
+.lvl-px.spot { color: var(--accent); font-weight: 700; }
+.lvl-note { color: var(--text-2); font-size: 11px; }
+.lvl-note strong { color: var(--text-0); font-weight: 500; }
+.lvl-bar { display: flex; align-items: center; }
+.lvl-bar-inner { height: 2px; background: var(--line); width: 100%; position: relative; border-radius: 1px; }
+.lvl-bar-r .lvl-bar-inner { background: linear-gradient(to right, transparent, rgba(248, 113, 113, 0.4)); }
+.lvl-bar-s .lvl-bar-inner { background: linear-gradient(to right, rgba(74, 222, 128, 0.4), transparent); }
+.lvl-bar-spot .lvl-bar-inner { background: var(--accent); height: 3px; }
+
+/* BOTTOM ROW */
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.avoid-list { padding: 4px 0; }
+.avoid-item {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.avoid-item:last-child { border-bottom: none; }
+.avoid-time {
+  font-family: 'Fraunces', serif;
+  font-size: 16px;
+  color: var(--warn);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.avoid-reason { color: var(--text-1); font-size: 11px; line-height: 1.55; }
+
+.cal-list { padding: 4px 0; }
+.cal-row {
+  padding: 11px 20px;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  font-size: 11px;
+}
+.cal-row:last-child { border-bottom: none; }
+.cal-time {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  color: var(--text-0);
+  font-size: 12px;
+}
+.cal-event { color: var(--text-1); }
+.cal-imp {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-weight: 500;
+}
+.cal-imp.high { background: rgba(248, 113, 113, 0.15); color: var(--bear); }
+.cal-imp.med { background: rgba(251, 191, 36, 0.12); color: var(--warn); }
+.cal-imp.low { background: var(--bg-3); color: var(--text-2); }
+
+.sector-list { padding: 4px 0; }
+.sec-row {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+}
+.sec-row:last-child { border-bottom: none; }
+.sec-tk {
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-0);
+}
+.sec-bar {
+  height: 6px;
+  background: var(--bg-3);
+  border-radius: 1px;
+  overflow: hidden;
+  position: relative;
+}
+.sec-bar-fill { height: 100%; border-radius: 1px; }
+.sec-bar-fill.up { background: linear-gradient(to right, var(--bull), rgba(74, 222, 128, 0.6)); }
+.sec-bar-fill.down { background: linear-gradient(to left, var(--bear), rgba(248, 113, 113, 0.6)); margin-left: auto; }
+.sec-pct {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 13px;
+  text-align: right;
+  min-width: 50px;
+}
+
+/* SCENARIOS */
+.scenarios {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.scenario {
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  padding: 22px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.scenario::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px; height: 100%;
+}
+.scenario.bull::before { background: var(--bull); }
+.scenario.bear::before { background: var(--bear); }
+.scenario.avoid::before { background: var(--warn); }
+
+.sc-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.sc-label.bull { color: var(--bull); }
+.sc-label.bear { color: var(--bear); }
+.sc-label.avoid { color: var(--warn); }
+
+.sc-title {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text-0);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+.sc-row {
+  display: flex;
+  margin-bottom: 10px;
+  gap: 8px;
+  align-items: baseline;
+  font-size: 11px;
+}
+.sc-key {
+  color: var(--text-3);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 9px;
+  min-width: 64px;
+  padding-top: 2px;
+}
+.sc-val {
+  color: var(--text-1);
+  font-size: 12px;
+  line-height: 1.55;
+  flex: 1;
+}
+.sc-val strong { color: var(--text-0); font-weight: 600; }
+
+/* WARNINGS */
+.warnings {
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--warn);
+  padding: 18px 24px;
+  margin-bottom: 24px;
+}
+.warn-head {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--warn);
+  margin-bottom: 12px;
+}
+.warn-list { list-style: none; }
+.warn-list li {
+  font-size: 11px;
+  color: var(--text-2);
+  padding: 5px 0 5px 18px;
+  position: relative;
+  line-height: 1.55;
+}
+.warn-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--warn);
+}
+
+/* FOOTER */
+.footer {
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  color: var(--text-3);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.footer .disclaimer {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 11px;
+  color: var(--text-2);
+}
+
+@media (max-width: 1100px) {
+  .hero { grid-template-columns: 1fr; }
+  .main-grid { grid-template-columns: 1fr; }
+  .bottom-grid { grid-template-columns: 1fr; }
+  .scenarios { grid-template-columns: 1fr; }
+  .header { grid-template-columns: 1fr; text-align: center; }
+  .header-right { text-align: center; }
+  .header-center { font-size: 56px; }
+}
+@media (max-width: 640px) {
+  .container { padding: 16px; }
+  .title { font-size: 22px; }
+  .bias-word { font-size: 36px; }
+  .header-center { font-size: 40px; }
+  .macro-mini { grid-template-columns: 1fr; }
+  .lvl-row { grid-template-columns: 70px 70px 1fr; }
+  .lvl-bar { display: none; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-cell, .section, .spx-strip, .scenario, .warnings {
+  animation: fadeUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+}
+.hero-cell:nth-child(1) { animation-delay: 0.05s; }
+.hero-cell:nth-child(2) { animation-delay: 0.1s; }
+.hero-cell:nth-child(3) { animation-delay: 0.15s; }
+.main-grid .section:nth-child(1) { animation-delay: 0.2s; }
+.main-grid .section:nth-child(2) { animation-delay: 0.25s; }
+.spx-strip { animation-delay: 0.3s; }
+.bottom-grid .section:nth-child(1) { animation-delay: 0.35s; }
+.bottom-grid .section:nth-child(2) { animation-delay: 0.4s; }
+.bottom-grid .section:nth-child(3) { animation-delay: 0.45s; }
+.scenarios .scenario:nth-child(1) { animation-delay: 0.5s; }
+.scenarios .scenario:nth-child(2) { animation-delay: 0.55s; }
+.scenarios .scenario:nth-child(3) { animation-delay: 0.6s; }
+.warnings { animation-delay: 0.65s; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="header">
+    <div class="header-left">
+      <div class="brand"><span class="brand-bar"></span>PREMARKET BRIEF · SIARHEI</div>
+      <h1 class="title">Daily <em>Context</em> · Engine v1.0</h1>
+    </div>
+    <div class="header-center">
+      27<span style="color: var(--accent); font-style: italic;">.</span>04
+      <span class="day">Понедельник · Apr 2026</span>
+    </div>
+    <div class="header-right">
+      <div><span class="blink"></span><span class="live">Pre-market live</span></div>
+      <div class="ts">09:00 CET · Open in 06h 30m</div>
+      <div>Source: Gemini Deep Research</div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-cell bias-card">
+      <div class="cell-label">Session Bias</div>
+      <div class="bias-headline">
+        <div class="bias-word">mixed</div>
+        <div class="bias-strength medium">Medium</div>
+      </div>
+      <div class="bias-narrative">
+        Massive structural bid в полупроводниках (<strong>SMH/SOXX inflows $5.45B</strong> за месяц) полностью абсорбирует макро-негатив. Рост 10Y &gt; 4.30% и геополитика по Ормузу давят на циклику и financials. ES пробил <strong>7150</strong> overnight, <strong>Call Wall на 7200</strong> — магнит через dealer hedging. <strong>FOMC в среду + аукционы 2Y/5Y сегодня</strong> сдерживают direction size.
+      </div>
+    </div>
+
+    <div class="hero-cell">
+      <div class="cell-label">Macro Snapshot</div>
+      <div class="macro-mini">
+        <div class="macro-row"><span class="macro-tk">ES</span><span><span class="macro-val">7195.00</span><span class="macro-d up">+0.72%</span></span></div>
+        <div class="macro-row"><span class="macro-tk">NQ</span><span><span class="macro-val">27383.25</span><span class="macro-d down">−0.19%</span></span></div>
+        <div class="macro-row"><span class="macro-tk">RTY</span><span><span class="macro-val">2785.20</span><span class="macro-d down">−0.39%</span></span></div>
+        <div class="macro-row"><span class="macro-tk">DXY</span><span><span class="macro-val">98.28</span><span class="macro-d down">−0.25%</span></span></div>
+        <div class="macro-row"><span class="macro-tk">10Y</span><span><span class="macro-val">4.328%</span><span class="macro-d up">+0.01b</span></span></div>
+        <div class="macro-row"><span class="macro-tk">WTI</span><span><span class="macro-val">96.88</span><span class="macro-d up">+2.63%</span></span></div>
+        <div class="macro-row"><span class="macro-tk">Gold</span><span><span class="macro-val">4714.83</span><span class="macro-d up">+0.10%</span></span></div>
+        <div class="macro-row"><span class="macro-tk">BTC</span><span><span class="macro-val">77569</span><span class="macro-d down">−0.60%</span></span></div>
+      </div>
+    </div>
+
+    <div class="hero-cell">
+      <div class="cell-label">Volatility Regime</div>
+      <div class="regime-grid">
+        <div class="regime-item"><span class="k">VIX</span><span class="v">18.71 <span class="macro-d down" style="font-size:11px;">−3.11%</span></span></div>
+        <div class="regime-item"><span class="k">VVIX</span><span class="v">97.18</span></div>
+        <div class="regime-item"><span class="k">Term Structure</span><span class="regime-tag">Contango</span></div>
+        <div class="regime-item"><span class="k">Dealer Gamma</span><span class="regime-tag">Positive</span></div>
+        <div class="regime-item"><span class="k">SPX 0DTE EM</span><span class="v">±54.14 pts <span style="color:var(--text-2);font-size:11px;">(±0.76%)</span></span></div>
+        <div class="regime-item"><span class="k">0DTE % of vol</span><span class="regime-tag warn">48% · Pinning</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="main-grid">
+    <div class="section">
+      <div class="section-head">
+        <div class="section-title">In <em>Focus</em></div>
+        <div class="section-meta">5 tickers · Swing &amp; intraday</div>
+      </div>
+      <table class="focus-table">
+        <tr>
+          <td class="tk-cell">
+            <div class="tk-symbol">NVDA</div>
+            <span class="tk-tag long"><span class="tk-arrow">↑</span>LONG</span>
+          </td>
+          <td class="tk-driver">Trend continuation, breakout ATH. SMH/SOXX massive inflows ($5.45B), AI structural bid, short gamma squeeze.</td>
+          <td class="tk-pct up">+4.32%</td>
+        </tr>
+        <tr>
+          <td class="tk-cell">
+            <div class="tk-symbol">TXN</div>
+            <span class="tk-tag long"><span class="tk-arrow">↑</span>LONG</span>
+          </td>
+          <td class="tk-driver">Consolidation breakout, RS leader. 4.5% вес в SMH, option flow imbalance, capex cycle.</td>
+          <td class="tk-pct up">+4.50%</td>
+        </tr>
+        <tr>
+          <td class="tk-cell">
+            <div class="tk-symbol">VZ</div>
+            <span class="tk-tag long"><span class="tk-arrow">↑</span>LONG</span>
+          </td>
+          <td class="tk-driver">Q1 beat $1.28, +55k phone adds (best Q1 since 2013), raised FY guide $4.95–4.99, dividend hike.</td>
+          <td class="tk-pct up">+3.89%</td>
+        </tr>
+        <tr>
+          <td class="tk-cell">
+            <div class="tk-symbol">XLF</div>
+            <span class="tk-tag long"><span class="tk-arrow">↑</span>LONG</span>
+          </td>
+          <td class="tk-driver">Oversold bounce −3.78% 5D, mean reversion, elevated IV rank, удержание зоны поддержки.</td>
+          <td class="tk-pct down">−3.78%<span style="color:var(--text-3);font-size:9px;display:block;">5D</span></td>
+        </tr>
+        <tr>
+          <td class="tk-cell">
+            <div class="tk-symbol">DLR</div>
+            <span class="tk-tag short"><span class="tk-arrow">↓</span>SHORT</span>
+          </td>
+          <td class="tk-driver">Breakdown below MA50. HSBC downgrade Buy → Hold, datacenter valuation reset on rates.</td>
+          <td class="tk-pct down">−1.50%</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-head">
+        <div class="section-title">Risk <em>Themes</em></div>
+        <div class="section-meta">5 · what can break the setup</div>
+      </div>
+      <div class="risks-list">
+        <div class="risk-item">
+          <div class="risk-num">01</div>
+          <div>
+            <div class="risk-title">Yields &amp; Auctions</div>
+            <div class="risk-desc">2Y/5Y Note auctions 19:00 CET. Пробой 10Y &gt; 4.35% схлопнет tech valuation premium через алго-deleveraging.</div>
+          </div>
+        </div>
+        <div class="risk-item">
+          <div class="risk-num">02</div>
+          <div>
+            <div class="risk-title">Strait of Hormuz binary</div>
+            <div class="risk-desc">Отмена Исламабада + новые тактические инициативы Тегерана. NLP-боты мгновенно перебрасывают NQ/ES → GC/CL.</div>
+          </div>
+        </div>
+        <div class="risk-item">
+          <div class="risk-num">03</div>
+          <div>
+            <div class="risk-title">Mega-cap earnings overhang</div>
+            <div class="risk-desc">MSFT/GOOGL/META/AMZN на неделе + FOMC. Institutional size сжат, ликвидность стакана падает, dealers рулят intraday.</div>
+          </div>
+        </div>
+        <div class="risk-item">
+          <div class="risk-num">04</div>
+          <div>
+            <div class="risk-title">SMH / XLK overheating</div>
+            <div class="risk-desc">RSI 14D ≈ 80, P/C в 98-м перцентиле. Любое расширение credit spreads → каскадное закрытие позиций.</div>
+          </div>
+        </div>
+        <div class="risk-item">
+          <div class="risk-num">05</div>
+          <div>
+            <div class="risk-title">0DTE positive gamma trap</div>
+            <div class="risk-desc">48% объёма SPX опционов = 0DTE. OTM directional сгорает на theta, charm decay в последние 90 мин может выдать однонаправленный push.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="spx-strip">
+    <div class="spx-head">
+      <div class="spx-title">SPX <em>Levels Ladder</em></div>
+      <div class="spx-spot">
+        <span class="spx-spot-label">ES proxy</span>
+        <span class="spx-spot-val">7195.00</span>
+        <span class="spx-em">EM ±54.14</span>
+      </div>
+    </div>
+
+    <div class="spx-ladder">
+      <div class="lvl-row">
+        <span class="lvl-tag r">R3</span>
+        <span class="lvl-px">7200</span>
+        <span class="lvl-note"><strong>Major Call Wall</strong> · gamma pin · dealer-driven resistance</span>
+        <span class="lvl-bar lvl-bar-r"><span class="lvl-bar-inner"></span></span>
+      </div>
+      <div class="lvl-row">
+        <span class="lvl-tag r">R2</span>
+        <span class="lvl-px">7184</span>
+        <span class="lvl-note">Intermediate target если SPX держит 7168</span>
+        <span class="lvl-bar lvl-bar-r"><span class="lvl-bar-inner"></span></span>
+      </div>
+      <div class="lvl-row">
+        <span class="lvl-tag r">R1</span>
+        <span class="lvl-px">7168</span>
+        <span class="lvl-note">Friday high · bullish trigger выше</span>
+        <span class="lvl-bar lvl-bar-r"><span class="lvl-bar-inner"></span></span>
+      </div>
+      <div class="lvl-row">
+        <span class="lvl-tag spot">SPOT</span>
+        <span class="lvl-px spot">~7195</span>
+        <span class="lvl-note"><strong>Consolidation 7160–7180</strong> · pinning zone</span>
+        <span class="lvl-bar lvl-bar-spot"><span class="lvl-bar-inner"></span></span>
+      </div>
+      <div class="lvl-row">
+        <span class="lvl-tag s">S1</span>
+        <span class="lvl-px">7148</span>
+        <span class="lvl-note">Pivot · bearish trigger ниже</span>
+        <span class="lvl-bar lvl-bar-s"><span class="lvl-bar-inner"></span></span>
+      </div>
+      <div class="lvl-row">
+        <span class="lvl-tag brk">BRK</span>
+        <span class="lvl-px">7112</span>
+        <span class="lvl-note"><strong>Breakdown trigger</strong> · потенциальный gamma flip → ускорение</span>
+        <span class="lvl-bar lvl-bar-s"><span class="lvl-bar-inner"></span></span>
+      </div>
+      <div class="lvl-row">
+        <span class="lvl-tag s">S2</span>
+        <span class="lvl-px">7085</span>
+        <span class="lvl-note">Цель при пробое 7112</span>
+        <span class="lvl-bar lvl-bar-s"><span class="lvl-bar-inner"></span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="bottom-grid">
+    <div class="section">
+      <div class="section-head">
+        <div class="section-title">Avoid <em>Windows</em></div>
+        <div class="section-meta">CET</div>
+      </div>
+      <div class="avoid-list">
+        <div class="avoid-item">
+          <div class="avoid-time">18:45–19:15</div>
+          <div class="avoid-reason">2Y/5Y Note auctions 19:00 CET. Риск шока ликвидности в трежерис и спайка VIX.</div>
+        </div>
+        <div class="avoid-item">
+          <div class="avoid-time">15:30–16:30</div>
+          <div class="avoid-reason">Первый час RTH без направленного Order Flow в диапазоне 7160–7180. Theta crush для 0DTE.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">
+        <div class="section-title">Today's <em>Calendar</em></div>
+        <div class="section-meta">CET</div>
+      </div>
+      <div class="cal-list">
+        <div class="cal-row"><span class="cal-time">16:30</span><span class="cal-event">Dallas Fed Manuf. Apr</span><span class="cal-imp low">Low</span></div>
+        <div class="cal-row"><span class="cal-time">17:30</span><span class="cal-event">3M Bill Auction · 3.60%</span><span class="cal-imp med">Med</span></div>
+        <div class="cal-row"><span class="cal-time">17:30</span><span class="cal-event">6M Bill Auction · 3.58%</span><span class="cal-imp med">Med</span></div>
+        <div class="cal-row"><span class="cal-time">19:00</span><span class="cal-event">2Y Note Auction · 3.95%</span><span class="cal-imp high">High</span></div>
+        <div class="cal-row"><span class="cal-time">19:00</span><span class="cal-event">5Y Note Auction · 4.00%</span><span class="cal-imp high">High</span></div>
+        <div class="cal-row"><span class="cal-time">AMC</span><span class="cal-event">TFII · CLS earnings</span><span class="cal-imp med">Med</span></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">
+        <div class="section-title">Sectors <em>5D</em></div>
+        <div class="section-meta">Top 3 / Bottom 3</div>
+      </div>
+      <div class="sector-list">
+        <div class="sec-row"><span class="sec-tk">XLK</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:100%"></span></span><span class="sec-pct up">+7.34</span></div>
+        <div class="sec-row"><span class="sec-tk">XLU</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:37%"></span></span><span class="sec-pct up">+2.72</span></div>
+        <div class="sec-row"><span class="sec-tk">XLI</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:24%"></span></span><span class="sec-pct up">+1.77</span></div>
+        <div class="sec-row" style="opacity:0.5;border-top:1px dashed var(--line);"><span style="font-size:9px;color:var(--text-3);letter-spacing:0.2em;text-transform:uppercase;">— bottom —</span></div>
+        <div class="sec-row"><span class="sec-tk">XLC</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:6%"></span></span><span class="sec-pct down">−0.42</span></div>
+        <div class="sec-row"><span class="sec-tk">XLY</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:14%"></span></span><span class="sec-pct down">−1.00</span></div>
+        <div class="sec-row"><span class="sec-tk">XLF</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:51%"></span></span><span class="sec-pct down">−3.78</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scenarios">
+    <div class="scenario bull">
+      <div class="sc-label bull">↑ Scenario A · Bullish</div>
+      <div class="sc-title">grind to <em>Call Wall</em></div>
+      <div class="sc-row">
+        <span class="sc-key">Trigger</span>
+        <span class="sc-val"><strong>SPX holds &gt; 7168</strong></span>
+      </div>
+      <div class="sc-row">
+        <span class="sc-key">Target</span>
+        <span class="sc-val"><strong>7184</strong> → slow grind to <strong>7200</strong> Call Wall</span>
+      </div>
+      <div class="sc-row">
+        <span class="sc-key">Structure</span>
+        <span class="sc-val">ATM call debit spreads. <em>OTM calls killed by theta</em> в positive gamma.</span>
+      </div>
+    </div>
+
+    <div class="scenario bear">
+      <div class="sc-label bear">↓ Scenario B · Bearish</div>
+      <div class="sc-title">break the <em>floor</em></div>
+      <div class="sc-row">
+        <span class="sc-key">Trigger</span>
+        <span class="sc-val"><strong>SPX breaks 7148</strong></span>
+      </div>
+      <div class="sc-row">
+        <span class="sc-key">Target</span>
+        <span class="sc-val"><strong>7112</strong> → on break <strong>7085</strong> (gamma flip)</span>
+      </div>
+      <div class="sc-row">
+        <span class="sc-key">Structure</span>
+        <span class="sc-val">Put debit spread. Ниже 7112 — momentum acceleration через dealer hedging.</span>
+      </div>
+    </div>
+
+    <div class="scenario avoid">
+      <div class="sc-label avoid">⊘ Avoid</div>
+      <div class="sc-title">stay <em>flat</em></div>
+      <div class="sc-row">
+        <span class="sc-key">Condition</span>
+        <span class="sc-val">SPX stuck 7160–7180 без направленного Order Flow в первый час; перед аукционами 19:00 CET.</span>
+      </div>
+      <div class="sc-row">
+        <span class="sc-key">Rule</span>
+        <span class="sc-val">Mean-reversion от GEX уровней предпочтительнее directional. <strong>Charm decay</strong> в последние 90 мин — однонаправленный push возможен.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="warnings">
+    <div class="warn-head">⚠ Warnings · ручная проверка перед открытием</div>
+    <ul class="warn-list">
+      <li>SPX cash spot не указан в DR явно — взят ES proxy ≈7195. Сверить с TOS перед открытием.</li>
+      <li>"Friday high 7168" и "Monday Pivot 7148" — уточнить классические pivot levels через QuantData.</li>
+      <li>VZ premarket %change в gainers (+3.89%) — сверить с live quote.</li>
+      <li>"0DTE Key levels to watch" в DR оставлены пустыми — все уровни взяты из Scenario A/B narrative.</li>
+      <li>bias_strength = medium субъективен: конфликт XLK risk-on и yields/FOMC overhang.</li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <div>Premarket Context Engine · v1.0 · DAILY mode</div>
+    <div class="disclaimer">Не является инвестиционной рекомендацией.</div>
+  </footer>
+
+</div>
+</body>
+</html>
