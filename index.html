@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premarket Brief · 06.05.2026</title>
+<title>Premarket Brief · 07.05.2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -386,6 +386,78 @@ body { min-height: 100vh; }
 .macro-d.up { background: var(--green-bg); color: var(--green-deep); }
 .macro-d.down { background: var(--red-bg); color: var(--red); }
 .macro-d.flat { background: var(--surface-2); color: var(--ink-3); }
+
+/* HISTORICAL CONTEXT */
+.hist-strip {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 24px 20px;
+  margin-bottom: 20px;
+}
+.hist-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 14px;
+}
+.hist-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.hist-meta { font-size: 12px; color: var(--ink-4); }
+.hist-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.hist-cell {
+  padding: 0 18px;
+  border-right: 1px solid var(--line);
+}
+.hist-cell:first-child { padding-left: 0; }
+.hist-cell:last-child { border-right: none; padding-right: 0; }
+.hist-label {
+  font-size: 11px;
+  color: var(--ink-3);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.hist-val {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+  margin-bottom: 3px;
+}
+.hist-sub {
+  font-size: 12px;
+  color: var(--ink-3);
+  margin-bottom: 6px;
+}
+.hist-regime {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+.hist-regime.calm,
+.hist-regime.bull,
+.hist-regime.normal { background: var(--green-bg); color: var(--green-deep); }
+.hist-regime.elevated,
+.hist-regime.neutral { background: var(--amber-bg); color: var(--amber); }
+.hist-regime.stressed,
+.hist-regime.bear,
+.hist-regime.stress { background: var(--red-bg); color: var(--red); }
+.hist-regime.complacency { background: var(--violet-bg); color: var(--violet); }
 
 /* MAIN SPLIT */
 .main-split {
@@ -778,6 +850,9 @@ body { min-height: 100vh; }
   .macro-strip { grid-template-columns: repeat(4, 1fr); gap: 16px 0; }
   .macro-cell { border-right: none; padding: 0 12px; border-bottom: 1px dashed var(--line); padding-bottom: 12px; }
   .macro-cell:nth-last-child(-n+4) { border-bottom: none; }
+  .hist-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 0; }
+  .hist-cell { border-right: none; padding: 0 12px; border-bottom: 1px dashed var(--line); padding-bottom: 12px; }
+  .hist-cell:nth-last-child(-n+2) { border-bottom: none; }
 }
 @media (max-width: 640px) {
   .container { padding: 16px; }
@@ -827,7 +902,7 @@ body { min-height: 100vh; }
     </div>
     <div class="header-meta">
       <span class="live-pill"><span class="live-dot"></span>Pre-market live</span>
-      <span>09:40 CET</span>
+      <span>10:00 CET</span>
       <button class="share-btn">Share
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
       </button>
@@ -840,7 +915,7 @@ body { min-height: 100vh; }
       <h1>Overview</h1>
       <p>Структура сессии · что важно знать до открытия рынка</p>
     </div>
-    <div class="date-badge">📅 Среда, 6 мая 2026 · Open in 05h 50m</div>
+    <div class="date-badge">📅 Четверг, 7 мая 2026 · Open in 05h 30m</div>
   </div>
 
   <!-- HERO: 3 main cards -->
@@ -862,7 +937,7 @@ body { min-height: 100vh; }
         <div class="bias-strength-pill">Medium</div>
       </div>
       <div class="bias-narrative">
-        Risk-on на тройном попутном: KOSPI <strong>+6.64%</strong> с Samsung &gt; $1T транслируется в NQ через AMD/MU, деэскалация в Ормузе сняла нефтяную риск-премию (CL <strong>−1.26%</strong>), DXY ушёл &lt; 98.50. VIX <strong>17.13</strong> в contango, на <strong>9.5%</strong> ниже 20D — дилеры в длинной гамме. SPY на <strong>+7.7%</strong> выше 200SMA, тренд бычий. Главный триггер дня — <strong>JOLTs в 16:00</strong> + Williams 18:50.
+        Жёсткий risk-on на двух драйверах: <strong>AMD blowout + AI guidance raise</strong> запускает вторую волну в semis (MU/SMCI/INTC/QCOM +10–18% pre), и <strong>обвал WTI к $93</strong> на слухах о дипсделке US-Iran снимает геополитическую премию и продавливает <strong>US10Y к 4.36%</strong>. ES +1.27% над <strong>7400</strong> с premium ~37 п. к SPX cash. Узкие места дня — данные <strong>14:30 CET (Jobless + Unit Labor Costs)</strong> и реакция consumer secs на <strong>DIS BMO</strong>.
       </div>
     </div>
 
@@ -878,11 +953,11 @@ body { min-height: 100vh; }
         </div>
       </div>
       <div class="risk-hero-list">
-        <div class="risk-hero-row"><span class="risk-hero-num">1</span><span><strong>JOLTs binary</strong> · 16:00 CET</span></div>
-        <div class="risk-hero-row"><span class="risk-hero-num">2</span><span><strong>Williams hawkish risk</strong> · 18:50</span></div>
-        <div class="risk-hero-row"><span class="risk-hero-num">3</span><span><strong>Tech overheating</strong> · корреляц. сжатие</span></div>
-        <div class="risk-hero-row"><span class="risk-hero-num">4</span><span><strong>Software/payments contagion</strong> · после PYPL</span></div>
-        <div class="risk-hero-row"><span class="risk-hero-num">5</span><span><strong>0DTE pinning trap</strong> · Net GEX +$79.55B</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">1</span><span><strong>US-Iran reversal</strong> · headline-driven</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">2</span><span><strong>Data shock 14:30</strong> · Jobless + ULC</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">3</span><span><strong>Semis concentration</strong> · AMD/MU/QCOM beta</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">4</span><span><strong>DIS earnings</strong> · ±6.7% implied move</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">5</span><span><strong>Gamma flip</strong> · ниже 7300 ускорение</span></div>
       </div>
     </div>
 
@@ -900,15 +975,15 @@ body { min-height: 100vh; }
       <div class="scenario-mini">
         <div class="scenario-row">
           <div class="sc-arrow bull">↑</div>
-          <div class="sc-text">Hold &gt; <strong>7250</strong> → grind to <strong>7300</strong> Call Wall</div>
+          <div class="sc-text">Hold &gt; <strong>7350</strong> → grind to <strong>7400</strong> gamma pin</div>
         </div>
         <div class="scenario-row">
           <div class="sc-arrow bear">↓</div>
-          <div class="sc-text">Break <strong>7250</strong> → target <strong>7200 / 7110</strong></div>
+          <div class="sc-text">Break <strong>7300</strong> → target <strong>7230 / 7200</strong></div>
         </div>
         <div class="scenario-row">
           <div class="sc-arrow flat">⊘</div>
-          <div class="sc-text">Stuck 7275–7290 · перед 16:00 — flat</div>
+          <div class="sc-text">Stuck 7350–7400 · перед 14:30 — flat</div>
         </div>
       </div>
     </div>
@@ -919,43 +994,77 @@ body { min-height: 100vh; }
   <section class="macro-strip">
     <div class="macro-cell">
       <div class="macro-tk">ES</div>
-      <div class="macro-val">7308.50</div>
-      <span class="macro-d up">+0.28%</span>
+      <div class="macro-val">7402.50</div>
+      <span class="macro-d up">+1.27%</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">NQ</div>
-      <div class="macro-val">28,336</div>
-      <span class="macro-d up">+0.74%</span>
+      <div class="macro-val">28,783</div>
+      <span class="macro-d up">+2.03%</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">VIX</div>
-      <div class="macro-val">17.13</div>
-      <span class="macro-d down">−1.44%</span>
+      <div class="macro-val">17.51</div>
+      <span class="macro-d up">+0.69%</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">DXY</div>
-      <div class="macro-val">98.13</div>
-      <span class="macro-d down">−0.35%</span>
+      <div class="macro-val">97.91</div>
+      <span class="macro-d down">−0.11%</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">10Y</div>
-      <div class="macro-val">4.416%</div>
-      <span class="macro-d down">−0.67%</span>
+      <div class="macro-val">4.356%</div>
+      <span class="macro-d down">−1.36%</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">WTI</div>
-      <div class="macro-val">100.50</div>
-      <span class="macro-d down">−1.26%</span>
+      <div class="macro-val">93.27</div>
+      <span class="macro-d down">−3.30%</span>
     </div>
     <div class="macro-cell">
-      <div class="macro-tk">Gold</div>
-      <div class="macro-val">4,653</div>
-      <span class="macro-d up">+2.10%</span>
+      <div class="macro-tk">GLD</div>
+      <div class="macro-val">435.45</div>
+      <span class="macro-d up">+0.20%</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">BTC</div>
-      <div class="macro-val">81,458</div>
-      <span class="macro-d up">+0.66%</span>
+      <div class="macro-val">81,508</div>
+      <span class="macro-d up">+0.10%</span>
+    </div>
+  </section>
+
+  <!-- HISTORICAL CONTEXT -->
+  <section class="hist-strip">
+    <div class="hist-head">
+      <div class="hist-title">Historical Context</div>
+      <div class="hist-meta">VIX 20D · SPY 200SMA · SPX 50SMA · ATR(14)</div>
+    </div>
+    <div class="hist-grid">
+      <div class="hist-cell">
+        <div class="hist-label">VIX vs 20D avg</div>
+        <div class="hist-val">17.51</div>
+        <div class="hist-sub">avg 18.34 · −4.50%</div>
+        <span class="hist-regime calm">Calm</span>
+      </div>
+      <div class="hist-cell">
+        <div class="hist-label">SPY vs 200SMA</div>
+        <div class="hist-val">733.83</div>
+        <div class="hist-sub">SMA 672.40 · +9.14%</div>
+        <span class="hist-regime bull">Bull</span>
+      </div>
+      <div class="hist-cell">
+        <div class="hist-label">SPX vs 50SMA</div>
+        <div class="hist-val">7365.12</div>
+        <div class="hist-sub">SMA 6845.67 · +7.59%</div>
+        <span class="hist-regime bull">Strong</span>
+      </div>
+      <div class="hist-cell">
+        <div class="hist-label">ATR(14) SPY</div>
+        <div class="hist-val">$7.18</div>
+        <div class="hist-sub">0.98% от spot</div>
+        <span class="hist-regime normal">Normal</span>
+      </div>
     </div>
   </section>
 
@@ -976,8 +1085,8 @@ body { min-height: 100vh; }
               <div class="tk-tag-mini long">Long</div>
             </div>
           </div>
-          <div class="tk-driver">Bernstein/KeyBanc upgrades · PT $525-530 · AI server demand · IVR 79</div>
-          <div class="tk-pct up">+4.02%<span class="tk-pct-sub">premkt</span></div>
+          <div class="tk-driver">Q1 blowout · AI guidance raise · IVR 70</div>
+          <div class="tk-pct up">+18.61%<span class="tk-pct-sub">premkt</span></div>
         </div>
         <div class="focus-row">
           <div class="tk-block">
@@ -987,41 +1096,41 @@ body { min-height: 100vh; }
               <div class="tk-tag-mini long">Long</div>
             </div>
           </div>
-          <div class="tk-driver">Gap & Go · KOSPI sympathy · HBM repricing · IVR 91</div>
-          <div class="tk-pct up">+6.07%<span class="tk-pct-sub">premkt</span></div>
+          <div class="tk-driver">HBM squeeze · агрессивный $700 call flow · IVR 90</div>
+          <div class="tk-pct up">+11.06%<span class="tk-pct-sub">premkt</span></div>
         </div>
         <div class="focus-row">
           <div class="tk-block">
             <div class="tk-direction long">↑</div>
             <div>
-              <div class="tk-name">WAT</div>
+              <div class="tk-name">QCOM</div>
               <div class="tk-tag-mini long">Long</div>
             </div>
           </div>
-          <div class="tk-driver">Earnings beat + guidance · multi-month base breakout · IVR 38</div>
-          <div class="tk-pct up">+10.64%<span class="tk-pct-sub">premkt</span></div>
-        </div>
-        <div class="focus-row">
-          <div class="tk-block">
-            <div class="tk-direction long">↑</div>
-            <div>
-              <div class="tk-name">NEM</div>
-              <div class="tk-tag-mini long">Long</div>
-            </div>
-          </div>
-          <div class="tk-driver">Gold $4653 · GDX momentum · margin expansion · IVR 49</div>
-          <div class="tk-pct up">+2.10%<span class="tk-pct-sub">gold</span></div>
+          <div class="tk-driver">Range breakout · post-earnings momentum · IVR 98</div>
+          <div class="tk-pct up">+10.76%<span class="tk-pct-sub">premkt</span></div>
         </div>
         <div class="focus-row">
           <div class="tk-block">
             <div class="tk-direction short">↓</div>
             <div>
-              <div class="tk-name">PYPL</div>
+              <div class="tk-name">OXY</div>
               <div class="tk-tag-mini short">Short</div>
             </div>
           </div>
-          <div class="tk-driver">Earnings miss · take rate compression · bear flag breakdown · IVR 29</div>
-          <div class="tk-pct down">−9.80%<span class="tk-pct-sub">premkt</span></div>
+          <div class="tk-driver">Breakdown MA50/200 · обвал нефти ломает cash flow · IVR 41</div>
+          <div class="tk-pct down">−6.98%<span class="tk-pct-sub">premkt</span></div>
+        </div>
+        <div class="focus-row">
+          <div class="tk-block">
+            <div class="tk-direction long">↑</div>
+            <div>
+              <div class="tk-name">DIS</div>
+              <div class="tk-tag-mini long">Watch</div>
+            </div>
+          </div>
+          <div class="tk-driver">Earnings BMO · implied move ±6.7% · маркер consumer</div>
+          <div class="tk-pct down">±6.7%<span class="tk-pct-sub">implied</span></div>
         </div>
       </div>
     </div>
@@ -1035,36 +1144,36 @@ body { min-height: 100vh; }
         <div class="risk-item">
           <div class="risk-num">01</div>
           <div>
-            <div class="risk-title">JOLTs binary</div>
-            <div class="risk-desc">16:00 CET · &gt;7.1M шок 10Y → распродажа NQ/XLK · cons. 6.882M</div>
+            <div class="risk-title">US-Iran reversal</div>
+            <div class="risk-desc">Risk-on построен на слухах · опровержение → отскок WTI, всплеск 10Y, ликвидация tech</div>
           </div>
         </div>
         <div class="risk-item">
           <div class="risk-num">02</div>
           <div>
-            <div class="risk-title">Williams hawkish risk</div>
-            <div class="risk-desc">18:50 · комментарий по R-star/sticky PCE 3.5% → intraday reversal</div>
+            <div class="risk-title">Data shock 14:30 CET</div>
+            <div class="risk-desc">Jobless &gt; 225K или ULC &gt; 3% → stagflation scare · ротация в XLU/XLP, давление на NQ</div>
           </div>
         </div>
         <div class="risk-item">
           <div class="risk-num">03</div>
           <div>
-            <div class="risk-title">Tech overheating</div>
-            <div class="risk-desc">XLK/SMH на ATH · корреляц. сжатие · AMD/MU mean-reversion риск</div>
+            <div class="risk-title">Semis concentration</div>
+            <div class="risk-desc">AMD/MU/QCOM/SMCI — высокая beta · слабый NQ open потащит весь кластер синхронно</div>
           </div>
         </div>
         <div class="risk-item">
           <div class="risk-num">04</div>
           <div>
-            <div class="risk-title">Software/payments contagion</div>
-            <div class="risk-desc">PYPL −9.8% · PLTR −4% · нулевая толерантность к мультипликаторным промахам</div>
+            <div class="risk-title">DIS post-earnings</div>
+            <div class="risk-desc">Implied ±6.7% · маркер для XLC/XLY · промах по marge ломает consumer narrative</div>
           </div>
         </div>
         <div class="risk-item">
           <div class="risk-num">05</div>
           <div>
-            <div class="risk-title">0DTE positive gamma trap</div>
-            <div class="risk-desc">Net GEX +$79.55B · 60% объёма SPX · OTM directional сгорает на theta</div>
+            <div class="risk-title">Gamma flip &lt; 7300</div>
+            <div class="risk-desc">Переход дилеров в short gamma · ускорение downside через хеджирование</div>
           </div>
         </div>
       </div>
@@ -1080,46 +1189,46 @@ body { min-height: 100vh; }
         <div class="section-meta">Карта поддержек, сопротивлений и триггеров</div>
       </div>
       <div class="spx-spot-block">
-        <div class="spx-spot-label">SPX cash</div>
-        <div class="spx-spot-val">7259.22</div>
-        <div class="spx-em">EM ±61.15 (±0.85%)</div>
+        <div class="spx-spot-label">SPX cash close</div>
+        <div class="spx-spot-val">7365.12</div>
+        <div class="spx-em">EM 0DTE ±49.37 (±0.68%)</div>
       </div>
     </div>
     <div class="ladder">
       <div class="lvl-row">
         <span class="lvl-tag r">R3</span>
-        <span class="lvl-px">7350</span>
-        <span class="lvl-note">Расширение при пробое 7300</span>
+        <span class="lvl-px">7450</span>
+        <span class="lvl-note">Дальняя цель при пробое 7400 на объёме</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag r">R2</span>
-        <span class="lvl-px">7300</span>
-        <span class="lvl-note"><strong>Major Call Wall + Peak GEX</strong> · 106.1K OI · pinning magnet</span>
+        <span class="lvl-px">7400</span>
+        <span class="lvl-note"><strong>Major gamma pin</strong> · круглый страйк · dealer pinning zone</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag r">R1</span>
-        <span class="lvl-px">7280</span>
-        <span class="lvl-note">Pivot · bullish trigger выше</span>
+        <span class="lvl-px">7380</span>
+        <span class="lvl-note">Implied SPX RTH open · ES premium ~37 п.</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag spot">Spot</span>
-        <span class="lvl-px spot">7259</span>
-        <span class="lvl-note"><strong>Consolidation 7275–7290</strong> · pinning zone</span>
+        <span class="lvl-px spot">7365.12</span>
+        <span class="lvl-note"><strong>Consolidation 7350–7400</strong> · pinning zone</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag s">S1</span>
-        <span class="lvl-px">7250</span>
-        <span class="lvl-note">Локальная база · bearish trigger ниже</span>
+        <span class="lvl-px">7300</span>
+        <span class="lvl-note">Pivot · breakdown trigger ниже на объёме</span>
+      </div>
+      <div class="lvl-row">
+        <span class="lvl-tag brk">BRK</span>
+        <span class="lvl-px">7230</span>
+        <span class="lvl-note"><strong>Vchera close base</strong> · gap fill зона</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag s">S2</span>
         <span class="lvl-px">7200</span>
-        <span class="lvl-note">Зона ликвидности · промежуточная цель downside</span>
-      </div>
-      <div class="lvl-row">
-        <span class="lvl-tag brk">BRK</span>
-        <span class="lvl-px">7110</span>
-        <span class="lvl-note"><strong>Zero-Gamma Level</strong> · gamma flip → каскад к 7000</span>
+        <span class="lvl-note">Структурная поддержка при глубоком gap fill</span>
       </div>
     </div>
   </section>
@@ -1134,16 +1243,12 @@ body { min-height: 100vh; }
       </div>
       <div>
         <div class="simple-row avoid-row">
+          <div class="avoid-time">14:15–14:45</div>
+          <div class="avoid-text">Jobless Claims + Unit Labor Costs · расширение спредов, риск ложных пробоев</div>
+        </div>
+        <div class="simple-row avoid-row">
           <div class="avoid-time">15:30–16:15</div>
-          <div class="avoid-text">Initial Balance + theta crush до JOLTs</div>
-        </div>
-        <div class="simple-row avoid-row">
-          <div class="avoid-time">15:55–16:10</div>
-          <div class="avoid-text">Окно перед JOLTs · IV spike risk</div>
-        </div>
-        <div class="simple-row avoid-row">
-          <div class="avoid-time">18:45–19:00</div>
-          <div class="avoid-text">Williams speech · headline risk на R-star/PCE</div>
+          <div class="avoid-text">Initial Balance после крупного gap · theta crush для 0DTE</div>
         </div>
       </div>
     </div>
@@ -1154,28 +1259,30 @@ body { min-height: 100vh; }
         <div class="section-meta">CET</div>
       </div>
       <div>
-        <div class="simple-row cal-row"><span class="cal-time">14:40</span><span class="cal-event">ECB Lane Speech</span><span class="cal-imp low">Low</span></div>
-        <div class="simple-row cal-row"><span class="cal-time">16:00</span><span class="cal-event">JOLTs Job Openings · 6.882M cons.</span><span class="cal-imp high">High</span></div>
-        <div class="simple-row cal-row"><span class="cal-time">16:00</span><span class="cal-event">JOLTs Job Quits · 2.974M prior</span><span class="cal-imp med">Med</span></div>
-        <div class="simple-row cal-row"><span class="cal-time">18:50</span><span class="cal-event">Fed Williams Speech</span><span class="cal-imp high">High</span></div>
-        <div class="simple-row cal-row"><span class="cal-time">19:30</span><span class="cal-event">API Crude Oil Stock Change</span><span class="cal-imp low">Low</span></div>
-        <div class="simple-row cal-row"><span class="cal-time">AMC</span><span class="cal-event">APP earnings · ARM · DIS</span><span class="cal-imp med">Med</span></div>
+        <div class="simple-row cal-row"><span class="cal-time">13:30</span><span class="cal-event">Challenger Job Cuts</span><span class="cal-imp low">Low</span></div>
+        <div class="simple-row cal-row"><span class="cal-time">14:30</span><span class="cal-event">Initial Jobless · 205K cons</span><span class="cal-imp high">High</span></div>
+        <div class="simple-row cal-row"><span class="cal-time">14:30</span><span class="cal-event">Continuing Claims · 1800K</span><span class="cal-imp med">Med</span></div>
+        <div class="simple-row cal-row"><span class="cal-time">14:30</span><span class="cal-event">Nonfarm Productivity Q1</span><span class="cal-imp high">High</span></div>
+        <div class="simple-row cal-row"><span class="cal-time">14:30</span><span class="cal-event">Unit Labor Costs Q1</span><span class="cal-imp high">High</span></div>
+        <div class="simple-row cal-row"><span class="cal-time">BMO</span><span class="cal-event">DIS earnings · ±6.7%</span><span class="cal-imp high">High</span></div>
       </div>
     </div>
 
     <div class="card section-card">
       <div class="section-head">
         <div class="section-title">Sectors 5D</div>
-        <div class="section-meta">Top / Bottom 3</div>
+        <div class="section-meta">Top / Bottom 4</div>
       </div>
       <div>
-        <div class="simple-row sec-row"><span class="sec-tk">XLE</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:68%"></span></span><span class="sec-pct up">+0.92</span></div>
-        <div class="simple-row sec-row"><span class="sec-tk">XLK</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:8%"></span></span><span class="sec-pct up">+0.11</span></div>
-        <div class="simple-row sec-row"><span class="sec-tk">XLV</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:22%"></span></span><span class="sec-pct down">−0.30</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLK</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:100%"></span></span><span class="sec-pct up">+12.57</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLI</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:94%"></span></span><span class="sec-pct up">+11.81</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLU</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:78%"></span></span><span class="sec-pct up">+9.80</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLP</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:71%"></span></span><span class="sec-pct up">+8.96</span></div>
         <div class="sec-divider">— Bottom —</div>
-        <div class="simple-row sec-row"><span class="sec-tk">XLY</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:57%"></span></span><span class="sec-pct down">−0.77</span></div>
-        <div class="simple-row sec-row"><span class="sec-tk">XLI</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:84%"></span></span><span class="sec-pct down">−1.14</span></div>
-        <div class="simple-row sec-row"><span class="sec-tk">XLB</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:100%"></span></span><span class="sec-pct down">−1.36</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLV</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:5%"></span></span><span class="sec-pct down">−0.30</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLC</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:8%"></span></span><span class="sec-pct down">−0.53</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLY</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:14%"></span></span><span class="sec-pct down">−0.80</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLB</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:20%"></span></span><span class="sec-pct down">−1.40</span></div>
       </div>
     </div>
 
@@ -1187,20 +1294,20 @@ body { min-height: 100vh; }
       <div class="sc-head">
         <span class="sc-badge bull">↑ Scenario A</span>
       </div>
-      <div class="sc-name">Grind to Call Wall</div>
-      <div class="sc-line"><span class="sc-line-key">Trigger</span><span class="sc-line-val"><strong>SPX &gt; 7280</strong> · удержание 7250 на открытии</span></div>
-      <div class="sc-line"><span class="sc-line-key">Target</span><span class="sc-line-val"><strong>7300</strong> Call Wall · Peak GEX (106K OI)</span></div>
-      <div class="sc-line"><span class="sc-line-key">Structure</span><span class="sc-line-val">Под подтверждение QuantData / MenthorQ</span></div>
+      <div class="sc-name">Vanna Grind to Pin</div>
+      <div class="sc-line"><span class="sc-line-key">Trigger</span><span class="sc-line-val"><strong>SPX holds 7350</strong> в первые 30 мин RTH, NQ leads</span></div>
+      <div class="sc-line"><span class="sc-line-key">Target</span><span class="sc-line-val"><strong>7400</strong> gamma pin → <strong>7450</strong></span></div>
+      <div class="sc-line"><span class="sc-line-key">Structure</span><span class="sc-line-val">ATM call debit spreads</span></div>
     </div>
 
     <div class="scenario-full bear">
       <div class="sc-head">
         <span class="sc-badge bear">↓ Scenario B</span>
       </div>
-      <div class="sc-name">Break the Floor</div>
-      <div class="sc-line"><span class="sc-line-key">Trigger</span><span class="sc-line-val"><strong>SPX &lt; 7250</strong> · подтверждение объёмом</span></div>
-      <div class="sc-line"><span class="sc-line-key">Target</span><span class="sc-line-val"><strong>7200 → 7110</strong> (zero-gamma → каскад)</span></div>
-      <div class="sc-line"><span class="sc-line-key">Structure</span><span class="sc-line-val">Под подтверждение QuantData / MenthorQ</span></div>
+      <div class="sc-name">Mean-Reversion Gap Fill</div>
+      <div class="sc-line"><span class="sc-line-key">Trigger</span><span class="sc-line-val"><strong>SPX &lt; 7300</strong> на объёме · NQ profit-taking AMD/SMCI</span></div>
+      <div class="sc-line"><span class="sc-line-key">Target</span><span class="sc-line-val"><strong>7230</strong> (vchera close base)</span></div>
+      <div class="sc-line"><span class="sc-line-key">Structure</span><span class="sc-line-val">Put debit spread</span></div>
     </div>
 
     <div class="scenario-full flat">
@@ -1208,13 +1315,13 @@ body { min-height: 100vh; }
         <span class="sc-badge flat">⊘ Avoid</span>
       </div>
       <div class="sc-name">Stay Flat</div>
-      <div class="sc-line"><span class="sc-line-key">Когда</span><span class="sc-line-val">Chop 7275–7290 в первые 45 мин · перед JOLTs/Williams</span></div>
-      <div class="sc-line"><span class="sc-line-key">Правило</span><span class="sc-line-val">Net GEX +$79.55B → range-bound · pinning у 7300</span></div>
+      <div class="sc-line"><span class="sc-line-key">Когда</span><span class="sc-line-val">SPX в 10pt range 14:00–14:30 CET перед data</span></div>
+      <div class="sc-line"><span class="sc-line-key">Правило</span><span class="sc-line-val">Theta crush · отсутствие directional flow убивает премию</span></div>
     </div>
   </section>
 
   <footer class="footer">
-    <div>Premarket Context Engine · v2.3 · Daily mode · 06.05.2026</div>
+    <div>Premarket Context Engine · v2.3 · Daily mode · 07.05.2026</div>
     <div class="disclaimer">Не является инвестиционной рекомендацией.</div>
   </footer>
 
