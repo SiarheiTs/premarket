@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premarket Brief · 14.05.2026</title>
+<title>Premarket Brief · 19.05.2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -80,34 +80,34 @@ body { min-height: 100vh; }
   color: var(--ink);
 }
 .logo-mark {
-  width: 36px; height: 36px;
+  width: 32px;
+  height: 32px;
   background: var(--ink);
-  border-radius: 9px;
+  color: var(--surface);
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   font-weight: 800;
-  font-size: 15px;
+  font-size: 16px;
 }
 .crumbs {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   color: var(--ink-3);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  margin-left: 4px;
+  padding-left: 14px;
+  margin-left: 6px;
+  border-left: 1px solid var(--line);
 }
-.crumbs::before { content: "›"; color: var(--ink-4); }
 .crumbs strong { color: var(--ink); font-weight: 600; }
 
 .header-meta {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 15px;
+  gap: 14px;
   color: var(--ink-3);
+  font-size: 13px;
+  font-weight: 500;
 }
 .live-pill {
   display: inline-flex;
@@ -115,588 +115,570 @@ body { min-height: 100vh; }
   gap: 6px;
   background: var(--green-bg);
   color: var(--green-deep);
-  padding: 7px 14px;
+  padding: 5px 11px;
   border-radius: 999px;
-  font-weight: 600;
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 .live-dot {
-  width: 6px; height: 6px;
+  width: 6px;
+  height: 6px;
+  background: var(--green);
   border-radius: 50%;
-  background: var(--green);
-  animation: pulse 1.6s infinite;
+  animation: pulse 2s infinite;
 }
-@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
-
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
+}
 .share-btn {
-  background: var(--green);
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid var(--line-2);
+  border-radius: 8px;
+  padding: 6px 11px;
+  font-size: 13px;
   font-weight: 600;
-  font-size: 14px;
+  color: var(--ink-2);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-family: inherit;
-  transition: background 0.2s;
+  gap: 6px;
 }
-.share-btn:hover { background: var(--green-deep); }
 
 /* OVERVIEW HEAD */
 .overview-head {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 .overview-head h1 {
   font-size: 32px;
   font-weight: 700;
+  letter-spacing: -0.025em;
   color: var(--ink);
-  letter-spacing: -0.02em;
-  line-height: 1.1;
   margin-bottom: 4px;
 }
 .overview-head p {
   color: var(--ink-3);
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 500;
 }
 .date-badge {
-  background: white;
-  border: 1px solid var(--line);
-  padding: 10px 16px;
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--ink-2);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-/* HERO ROW: 3 main cards */
-.hero {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.card {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 22px 24px;
-  position: relative;
+  border-radius: 12px;
+  padding: 9px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2);
+  box-shadow: var(--shadow-sm);
 }
 
+/* CARDS */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+}
 .card-head {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   margin-bottom: 16px;
 }
 .card-icon {
-  width: 40px; height: 40px;
-  border-radius: 11px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--ink);
+  color: var(--surface);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
 }
-.card-icon svg { width: 22px; height: 22px; }
-.card-icon.violet { background: var(--violet-bg); color: var(--violet); }
-.card-icon.amber { background: var(--amber-bg); color: var(--amber); }
-.card-icon.green { background: var(--green-bg); color: var(--green-deep); }
-.card-icon.red { background: var(--red-bg); color: var(--red); }
-.card-icon.dark { background: var(--ink); color: white; }
-
+.card-icon svg { width: 17px; height: 17px; }
+.card-icon.amber { background: var(--amber); }
+.card-icon.dark { background: var(--ink-2); }
 .card-title {
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 700;
-  color: var(--ink);
-  letter-spacing: -0.01em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
 }
 .card-subtitle {
-  font-size: 13px;
-  color: var(--ink-3);
-  margin-top: 2px;
+  font-size: 12px;
+  color: var(--ink-4);
+  font-weight: 500;
 }
 
-/* BIAS hero card — green like My Balance */
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 22px;
+}
 .bias-card {
-  background: linear-gradient(135deg, #14a36e 0%, #0e8b5d 100%);
-  color: white;
-  border: none;
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
-.bias-card::after {
-  content: '';
-  position: absolute;
-  top: -40%; right: -10%;
-  width: 280px; height: 280px;
-  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
-  pointer-events: none;
-}
-.bias-card .card-icon {
-  background: rgba(255,255,255,0.18);
-  color: white;
-}
-.bias-card .card-title { color: white; }
-.bias-card .card-subtitle { color: rgba(255,255,255,0.7); }
-
 .bias-value {
   display: flex;
   align-items: baseline;
   gap: 14px;
   margin-bottom: 14px;
-  flex-wrap: wrap;
 }
 .bias-word {
-  font-size: 44px;
+  font-size: 52px;
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
+  color: var(--ink);
   line-height: 1;
-  text-transform: capitalize;
 }
 .bias-strength-pill {
-  background: rgba(255,255,255,0.18);
-  color: white;
-  padding: 5px 12px;
+  padding: 5px 13px;
+  background: var(--amber-bg);
+  color: var(--amber);
   border-radius: 999px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
 }
 .bias-narrative {
-  font-size: 15px;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.92);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-2);
 }
-.bias-narrative strong {
-  color: white;
-  font-weight: 700;
-}
+.bias-narrative strong { color: var(--ink); font-weight: 700; }
 
-/* RISK CARD (hero) */
-.risk-hero-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+.risk-hero-list { display: flex; flex-direction: column; gap: 9px; }
 .risk-hero-row {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 15px;
+  font-size: 14px;
   color: var(--ink-2);
-  padding: 6px 0;
 }
 .risk-hero-num {
-  width: 24px; height: 24px;
+  width: 22px;
+  height: 22px;
   background: var(--amber-bg);
   color: var(--amber);
-  border-radius: 7px;
-  font-size: 12px;
-  font-weight: 700;
-  display: flex;
+  border-radius: 50%;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
   flex-shrink: 0;
 }
 .risk-hero-row strong { color: var(--ink); font-weight: 600; }
 
-/* 0DTE CARD */
-.scenario-mini {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
+.scenario-mini { display: flex; flex-direction: column; gap: 10px; }
 .scenario-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 8px 0;
   border-bottom: 1px solid var(--line);
 }
-.scenario-row:last-child { border-bottom: none; padding-bottom: 0; }
+.scenario-row:last-child { border-bottom: none; }
 .sc-arrow {
-  width: 32px; height: 32px;
-  border-radius: 9px;
-  display: flex;
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-  font-weight: 700;
-  flex-shrink: 0;
+  font-weight: 800;
+  font-size: 14px;
 }
 .sc-arrow.bull { background: var(--green-bg); color: var(--green-deep); }
 .sc-arrow.bear { background: var(--red-bg); color: var(--red); }
-.sc-arrow.flat { background: var(--surface-2); color: var(--ink-3); border: 1px solid var(--line); }
-.sc-text { font-size: 15px; color: var(--ink-2); flex: 1; line-height: 1.4; }
-.sc-text strong { color: var(--ink); font-weight: 600; }
+.sc-arrow.flat { background: var(--amber-bg); color: var(--amber); }
+.sc-text {
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.45;
+}
+.sc-text strong { color: var(--ink); font-weight: 700; }
 
 /* MACRO STRIP */
 .macro-strip {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 22px 24px;
-  margin-bottom: 20px;
+  padding: 18px 22px;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 0;
+  margin-bottom: 22px;
+  box-shadow: var(--shadow-sm);
 }
 .macro-cell {
-  padding: 0 16px;
+  padding: 0 18px;
   border-right: 1px solid var(--line);
 }
+.macro-cell:last-child { border-right: none; }
 .macro-cell:first-child { padding-left: 0; }
-.macro-cell:last-child { border-right: none; padding-right: 0; }
 .macro-tk {
-  font-size: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   color: var(--ink-3);
-  font-weight: 600;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 .macro-val {
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 700;
-  color: var(--ink);
   letter-spacing: -0.02em;
-  margin-bottom: 4px;
-  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 2px;
+  font-variant-numeric: tabular-nums;
 }
 .macro-d {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  padding: 3px 8px;
-  border-radius: 6px;
+  font-variant-numeric: tabular-nums;
 }
-.macro-d.up { background: var(--green-bg); color: var(--green-deep); }
-.macro-d.down { background: var(--red-bg); color: var(--red); }
-.macro-d.flat { background: var(--surface-2); color: var(--ink-3); }
+.macro-d.up { color: var(--green-deep); }
+.macro-d.down { color: var(--red); }
 
 /* MAIN SPLIT */
 .main-split {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 18px;
+  margin-bottom: 22px;
 }
-
-/* FOCUS TABLE */
-.section-card { padding: 0; overflow: hidden; }
+.section-card { padding: 22px; }
 .section-head {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 24px 16px;
+  align-items: baseline;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
   border-bottom: 1px solid var(--line);
 }
 .section-title {
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 700;
+  letter-spacing: -0.015em;
   color: var(--ink);
-  letter-spacing: -0.01em;
 }
 .section-meta {
-  font-size: 13px;
-  color: var(--ink-3);
+  font-size: 12px;
   font-weight: 500;
+  color: var(--ink-4);
 }
 
 .focus-row {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 130px 1fr 100px;
+  gap: 14px;
   align-items: center;
-  gap: 16px;
-  padding: 14px 24px;
+  padding: 13px 0;
   border-bottom: 1px solid var(--line);
-  transition: background 0.15s;
 }
 .focus-row:last-child { border-bottom: none; }
-.focus-row:hover { background: var(--surface-2); }
-
 .tk-block {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 .tk-direction {
-  width: 32px; height: 32px;
-  border-radius: 9px;
-  display: flex;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 700;
   flex-shrink: 0;
 }
 .tk-direction.long { background: var(--green-bg); color: var(--green-deep); }
 .tk-direction.short { background: var(--red-bg); color: var(--red); }
+.tk-direction.avoid { background: var(--amber-bg); color: var(--amber); }
 .tk-name {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--ink);
   letter-spacing: -0.01em;
 }
 .tk-tag-mini {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
+  color: var(--ink-3);
   margin-top: 1px;
 }
 .tk-tag-mini.long { color: var(--green-deep); }
 .tk-tag-mini.short { color: var(--red); }
-
+.tk-tag-mini.avoid { color: var(--amber); }
 .tk-driver {
-  font-size: 15px;
+  font-size: 13px;
   color: var(--ink-2);
   line-height: 1.4;
 }
-
 .tk-pct {
-  font-size: 19px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
   text-align: right;
-  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 .tk-pct.up { color: var(--green-deep); }
 .tk-pct.down { color: var(--red); }
+.tk-pct.flat { color: var(--ink-3); }
 .tk-pct-sub {
   display: block;
-  font-size: 11px;
-  color: var(--ink-4);
+  font-size: 10px;
   font-weight: 500;
-  letter-spacing: 0.06em;
+  color: var(--ink-4);
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
-/* RISK FULL */
-.risk-list { padding: 6px 0; }
+.risk-list { display: flex; flex-direction: column; gap: 4px; }
 .risk-item {
-  padding: 14px 24px;
-  border-bottom: 1px solid var(--line);
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
   gap: 14px;
-  align-items: start;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
 }
 .risk-item:last-child { border-bottom: none; }
 .risk-num {
-  width: 28px; height: 28px;
-  border-radius: 8px;
-  background: var(--amber-bg);
-  color: var(--amber);
-  font-size: 12px;
+  font-size: 22px;
   font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: var(--ink-5);
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  width: 32px;
   flex-shrink: 0;
 }
 .risk-title {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--ink);
   margin-bottom: 2px;
-  letter-spacing: -0.005em;
 }
-.risk-desc { color: var(--ink-3); font-size: 14px; line-height: 1.45; }
+.risk-desc {
+  font-size: 13px;
+  color: var(--ink-3);
+  line-height: 1.4;
+}
 
-/* SPX LADDER */
-.spx-card {
-  margin-bottom: 20px;
-  padding: 0;
-}
+/* SPX CARD */
+.spx-card { padding: 24px; margin-bottom: 22px; }
 .spx-head-row {
-  padding: 22px 24px 18px;
-  border-bottom: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
 }
-.spx-spot-block {
-  text-align: right;
-}
+.spx-spot-block { text-align: right; }
 .spx-spot-label {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   color: var(--ink-3);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 2px;
 }
 .spx-spot-val {
-  font-size: 30px;
-  font-weight: 800;
+  font-size: 28px;
+  font-weight: 700;
   color: var(--ink);
-  letter-spacing: -0.025em;
-  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  margin: 2px 0;
 }
 .spx-em {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--ink-3);
-  font-weight: 500;
-  margin-top: 2px;
+  font-variant-numeric: tabular-nums;
 }
 
-.ladder { padding: 12px 24px 18px; }
+.ladder {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
 .lvl-row {
   display: grid;
-  grid-template-columns: 70px 110px 1fr;
-  align-items: center;
+  grid-template-columns: 70px 130px 1fr;
   gap: 16px;
-  padding: 13px 0;
+  align-items: center;
+  padding: 11px 0;
   border-bottom: 1px solid var(--line);
 }
 .lvl-row:last-child { border-bottom: none; }
-
 .lvl-tag {
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 5px 10px;
-  border-radius: 6px;
   text-align: center;
-  display: inline-block;
+  padding: 4px 0;
+  border-radius: 5px;
 }
 .lvl-tag.r { background: var(--red-bg); color: var(--red); }
 .lvl-tag.s { background: var(--green-bg); color: var(--green-deep); }
-.lvl-tag.brk { background: var(--red); color: white; }
-.lvl-tag.spot { background: var(--ink); color: white; }
+.lvl-tag.spot { background: var(--ink); color: var(--surface); }
+.lvl-tag.brk { background: var(--violet-bg); color: var(--violet); }
 
 .lvl-px {
   font-size: 23px;
   font-weight: 700;
   color: var(--ink);
   letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
 }
-.lvl-px.spot { color: var(--green-deep); }
-
+.lvl-px.spot { color: var(--ink); font-weight: 800; }
 .lvl-note {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--ink-3);
   line-height: 1.4;
 }
-.lvl-note strong { color: var(--ink-2); font-weight: 600; }
+.lvl-note strong { color: var(--ink); font-weight: 700; }
 
 /* BOTTOM ROW */
 .bottom-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 18px;
+  margin-bottom: 22px;
 }
 
 .simple-row {
-  padding: 12px 24px;
-  border-bottom: 1px solid var(--line);
   display: grid;
   align-items: center;
-  gap: 14px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
 }
 .simple-row:last-child { border-bottom: none; }
 
-.avoid-row { grid-template-columns: auto 1fr; }
+.avoid-row { grid-template-columns: 110px 1fr; gap: 12px; }
 .avoid-time {
-  background: var(--amber-bg);
-  color: var(--amber);
-  padding: 7px 12px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-.avoid-text {
-  font-size: 14px;
-  color: var(--ink-2);
-  line-height: 1.45;
-}
-
-.cal-row { grid-template-columns: 60px 1fr auto; }
-.cal-time {
-  font-size: 15px;
   font-weight: 700;
   color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
 }
-.cal-event { font-size: 14px; color: var(--ink-2); }
-.cal-imp {
-  font-size: 11px;
+.avoid-text { color: var(--ink-2); line-height: 1.4; }
+
+.cal-row { grid-template-columns: 56px 1fr 50px; gap: 10px; }
+.cal-time {
   font-weight: 700;
-  letter-spacing: 0.06em;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+}
+.cal-event { color: var(--ink-2); font-size: 13px; }
+.cal-imp {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 0;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 999px;
 }
 .cal-imp.high { background: var(--red-bg); color: var(--red); }
 .cal-imp.med { background: var(--amber-bg); color: var(--amber); }
 .cal-imp.low { background: var(--surface-2); color: var(--ink-3); }
 
-.sec-row { grid-template-columns: 56px 1fr auto; }
+.sec-row { grid-template-columns: 38px 1fr 50px; gap: 10px; }
 .sec-tk {
-  font-size: 15px;
   font-weight: 700;
   color: var(--ink);
+  font-size: 13px;
 }
 .sec-bar {
-  height: 9px;
+  height: 6px;
   background: var(--surface-2);
-  border-radius: 4px;
+  border-radius: 3px;
   overflow: hidden;
   position: relative;
 }
-.sec-bar-fill { height: 100%; border-radius: 4px; }
+.sec-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+}
 .sec-bar-fill.up { background: var(--green); }
-.sec-bar-fill.down { background: var(--red); margin-left: auto; }
+.sec-bar-fill.down { background: var(--red); }
 .sec-pct {
-  font-size: 15px;
-  font-weight: 700;
   text-align: right;
-  min-width: 54px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
 }
 .sec-pct.up { color: var(--green-deep); }
 .sec-pct.down { color: var(--red); }
 .sec-divider {
-  font-size: 11px;
+  text-align: center;
+  font-size: 10px;
+  color: var(--ink-4);
   font-weight: 700;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-4);
-  padding: 9px 24px;
-  text-align: center;
-  border-top: 1px dashed var(--line-2);
-  border-bottom: 1px dashed var(--line-2);
-  background: var(--surface-2);
+  padding: 8px 0 4px;
 }
 
-/* SCENARIOS FULL */
+/* GAMMA REGIME CARD */
+.gamma-row {
+  display: grid;
+  grid-template-columns: 50px 1fr 80px 90px;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+.gamma-row:last-child { border-bottom: none; }
+.gamma-tk { font-weight: 700; color: var(--ink); font-size: 14px; }
+.gamma-regime {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  display: inline-block;
+}
+.gamma-regime.long { background: var(--green-bg); color: var(--green-deep); }
+.gamma-regime.short { background: var(--red-bg); color: var(--red); }
+.gamma-regime.neutral { background: var(--surface-2); color: var(--ink-3); }
+.gamma-lvl {
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-2);
+  font-size: 12px;
+  text-align: right;
+}
+.gamma-lvl strong { color: var(--ink); font-weight: 700; }
+
+/* SCENARIOS */
 .scenarios {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 18px;
+  margin-bottom: 22px;
 }
 .scenario-full {
-  padding: 22px 24px;
-  border-radius: var(--radius);
   background: var(--surface);
+  border-radius: var(--radius);
   border: 1px solid var(--line);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
   position: relative;
   overflow: hidden;
 }
@@ -827,7 +809,7 @@ body { min-height: 100vh; }
     </div>
     <div class="header-meta">
       <span class="live-pill"><span class="live-dot"></span>Pre-market live</span>
-      <span>10:50 CET</span>
+      <span>11:15 CET</span>
       <button class="share-btn">Share
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
       </button>
@@ -840,7 +822,7 @@ body { min-height: 100vh; }
       <h1>Overview</h1>
       <p>Структура сессии · что важно знать до открытия рынка</p>
     </div>
-    <div class="date-badge">📅 Четверг, 14 мая 2026 · Open in 04h 40m</div>
+    <div class="date-badge">📅 Вторник, 19 мая 2026 · Open in 04h 15m</div>
   </div>
 
   <!-- HERO: 3 main cards -->
@@ -862,7 +844,7 @@ body { min-height: 100vh; }
         <div class="bias-strength-pill">Low</div>
       </div>
       <div class="bias-narrative">
-        /ES +43 пункта от закрытия SPX, упирается в <strong>Call Resistance 7500</strong> (MenthorQ gamma wall). <strong>CSCO +18% AH</strong> после beat и raise гайд тащит tech, но память (MU −2.5%) и Китай (BIDU/BABA −3..−4%) корректируют. Дилеры в <strong>положительной гамме</strong> (Net GEX +$1.39B) — режим стабилизации в коробке 7400–7500. Главный риск разворота — <strong>Retail Sales в 14:30 CET</strong> после hot CPI во вторник.
+        /ES держится в коробке <strong>7400–7430</strong> после пятничного отката от 7517. VIX 18.0 — нормальный режим, но контекст изменился: <strong>Powell завершил полномочия в пятницу</strong>, Warsh заходит, 10Y скакнул до 4.62, нефть выше после Иран-новостей. <strong>NVDA earnings завтра AMC</strong> — крупнейший катализатор недели уже завтра. Двойной режим в гамме: SPX +683M (long gamma), SPY −226M (short gamma). HVL SPX 7395 ниже спота 7403 — на грани переключения режима.
       </div>
     </div>
 
@@ -878,11 +860,11 @@ body { min-height: 100vh; }
         </div>
       </div>
       <div class="risk-hero-list">
-        <div class="risk-hero-row"><span class="risk-hero-num">1</span><span><strong>Retail Sales</strong> · 14:30 CET</span></div>
-        <div class="risk-hero-row"><span class="risk-hero-num">2</span><span><strong>US10Y 4.48%</strong> · около 2026 high</span></div>
-        <div class="risk-hero-row"><span class="risk-hero-num">3</span><span><strong>Trump+Xi саммит</strong> · headlines весь день</span></div>
-        <div class="risk-hero-row"><span class="risk-hero-num">4</span><span><strong>AMAT earnings</strong> · 22:30 AMC</span></div>
-        <div class="risk-hero-row"><span class="risk-hero-num">5</span><span><strong>Call Wall 7500</strong> · ловушка для пробоя</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">1</span><span><strong>NVDA earnings</strong> · завтра AMC</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">2</span><span><strong>Powell → Warsh</strong> · yields растут</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">3</span><span><strong>Iran tensions</strong> · WTI пробил 107</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">4</span><span><strong>HD earnings</strong> · housing barometer</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">5</span><span><strong>SPX/SPY gamma split</strong> · редкая картина</span></div>
       </div>
     </div>
 
@@ -900,15 +882,15 @@ body { min-height: 100vh; }
       <div class="scenario-mini">
         <div class="scenario-row">
           <div class="sc-arrow bull">↑</div>
-          <div class="sc-text">Hold &gt; <strong>7500</strong> → grind to <strong>7513 / 7530</strong></div>
+          <div class="sc-text">Hold &gt; <strong>7430</strong> → target <strong>7460–7475</strong></div>
         </div>
         <div class="scenario-row">
           <div class="sc-arrow bear">↓</div>
-          <div class="sc-text">Break <strong>7400</strong> → target <strong>7325 / 7295</strong></div>
+          <div class="sc-text">Break <strong>7395</strong> → gamma flip · <strong>7350 → 7335</strong></div>
         </div>
         <div class="scenario-row">
           <div class="sc-arrow flat">⊘</div>
-          <div class="sc-text">Stuck 7440–7460 · перед 14:30 — flat</div>
+          <div class="sc-text">Pin 7400 · diapason 7395–7430</div>
         </div>
       </div>
     </div>
@@ -918,44 +900,44 @@ body { min-height: 100vh; }
   <!-- MACRO STRIP -->
   <section class="macro-strip">
     <div class="macro-cell">
-      <div class="macro-tk">/ES</div>
-      <div class="macro-val">7487.13</div>
-      <span class="macro-d up">+0.58%</span>
+      <div class="macro-tk">ES</div>
+      <div class="macro-val">7,410</div>
+      <span class="macro-d up">+0.09%</span>
     </div>
     <div class="macro-cell">
-      <div class="macro-tk">/NQ</div>
-      <div class="macro-val">29,581</div>
-      <span class="macro-d up">+0.85%</span>
+      <div class="macro-tk">NQ</div>
+      <div class="macro-val">28,988</div>
+      <span class="macro-d down">−0.11%</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">VIX</div>
-      <div class="macro-val">17.81</div>
-      <span class="macro-d down">−0.34%</span>
+      <div class="macro-val">18.04</div>
+      <span class="macro-d up">+1.29%</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">DXY</div>
-      <div class="macro-val">98.49</div>
-      <span class="macro-d flat">+0.01%</span>
+      <div class="macro-val">99.24</div>
+      <span class="macro-d up">+0.28%</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">10Y</div>
-      <div class="macro-val">4.481%</div>
-      <span class="macro-d up">+0.40%</span>
+      <div class="macro-val">4.623%</div>
+      <span class="macro-d up">+0.61%</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">WTI</div>
-      <div class="macro-val">101.21</div>
-      <span class="macro-d up">+0.20%</span>
+      <div class="macro-val">107.93</div>
+      <span class="macro-d up">+1.8%</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">Gold</div>
-      <div class="macro-val">431.66</div>
-      <span class="macro-d down">−0.10%</span>
+      <div class="macro-val">416.85</div>
+      <span class="macro-d flat">flat</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">BTC</div>
-      <div class="macro-val">79,906</div>
-      <span class="macro-d up">+0.79%</span>
+      <div class="macro-val">76,970</div>
+      <span class="macro-d down">−2.3%</span>
     </div>
   </section>
 
@@ -965,85 +947,52 @@ body { min-height: 100vh; }
     <div class="card section-card">
       <div class="section-head">
         <div class="section-title">In Focus</div>
-        <div class="section-meta">8 tickers</div>
+        <div class="section-meta">premarket movers</div>
       </div>
       <div>
         <div class="focus-row">
           <div class="tk-block">
             <div class="tk-direction long">↑</div>
             <div>
-              <div class="tk-name">CSCO</div>
+              <div class="tk-name">AS</div>
               <div class="tk-tag-mini long">Long</div>
             </div>
           </div>
-          <div class="tk-driver">Q3 beat · FY26 guide raise · AI restructuring · IVR 118</div>
-          <div class="tk-pct up">+18.17%<span class="tk-pct-sub">premkt</span></div>
+          <div class="tk-driver">Amer Sports earnings BMO · IV rank 53</div>
+          <div class="tk-pct up">+1.86%<span class="tk-pct-sub">premkt</span></div>
         </div>
         <div class="focus-row">
           <div class="tk-block">
             <div class="tk-direction long">↑</div>
-            <div>
-              <div class="tk-name">NVDA</div>
-              <div class="tk-tag-mini long">Long</div>
-            </div>
-          </div>
-          <div class="tk-driver">Huang летит с Trump в Китай · earnings 20.05 AMC</div>
-          <div class="tk-pct up">+2.52%<span class="tk-pct-sub">premkt</span></div>
-        </div>
-        <div class="focus-row">
-          <div class="tk-block">
-            <div class="tk-direction long">↑</div>
-            <div>
-              <div class="tk-name">AMAT</div>
-              <div class="tk-tag-mini long">Long</div>
-            </div>
-          </div>
-          <div class="tk-driver">UBS upgrade buy · earnings AMC сегодня · IVR 101</div>
-          <div class="tk-pct up">+1.92%<span class="tk-pct-sub">premkt</span></div>
-        </div>
-        <div class="focus-row">
-          <div class="tk-block">
-            <div class="tk-direction long">↑</div>
-            <div>
-              <div class="tk-name">TSLA</div>
-              <div class="tk-tag-mini long">Long</div>
-            </div>
-          </div>
-          <div class="tk-driver">Тех-моментум продолжается · IVR low 24</div>
-          <div class="tk-pct up">+0.67%<span class="tk-pct-sub">premkt</span></div>
-        </div>
-        <div class="focus-row">
-          <div class="tk-block">
-            <div class="tk-direction short">↓</div>
             <div>
               <div class="tk-name">BIDU</div>
-              <div class="tk-tag-mini short">Short</div>
+              <div class="tk-tag-mini long">Long</div>
             </div>
           </div>
-          <div class="tk-driver">Фиксация перед earnings 18.05 · IVR 109</div>
-          <div class="tk-pct down">−4.00%<span class="tk-pct-sub">premkt</span></div>
+          <div class="tk-driver">Q1 beat · AI revenue +49% YoY</div>
+          <div class="tk-pct up">+1.49%<span class="tk-pct-sub">premkt</span></div>
         </div>
         <div class="focus-row">
           <div class="tk-block">
-            <div class="tk-direction short">↓</div>
+            <div class="tk-direction long">↑</div>
             <div>
-              <div class="tk-name">BABA</div>
-              <div class="tk-tag-mini short">Short</div>
+              <div class="tk-name">GOOGL</div>
+              <div class="tk-tag-mini long">Long</div>
             </div>
           </div>
-          <div class="tk-driver">Фиксация после +8% в среду · China tech earnings</div>
-          <div class="tk-pct down">−3.12%<span class="tk-pct-sub">premkt</span></div>
+          <div class="tk-driver">Cloud-сделка с Blackstone · IV rank 45</div>
+          <div class="tk-pct up">+0.82%<span class="tk-pct-sub">premkt</span></div>
         </div>
         <div class="focus-row">
           <div class="tk-block">
-            <div class="tk-direction short">↓</div>
+            <div class="tk-direction avoid">⊘</div>
             <div>
-              <div class="tk-name">MU</div>
-              <div class="tk-tag-mini short">Short</div>
+              <div class="tk-name">HD</div>
+              <div class="tk-tag-mini avoid">Avoid</div>
             </div>
           </div>
-          <div class="tk-driver">Фиксация мемори-сектора после ракеты · IVR 97</div>
-          <div class="tk-pct down">−2.46%<span class="tk-pct-sub">premkt</span></div>
+          <div class="tk-driver">Earnings BMO сегодня · IV rank 98</div>
+          <div class="tk-pct up">+0.71%<span class="tk-pct-sub">premkt</span></div>
         </div>
         <div class="focus-row">
           <div class="tk-block">
@@ -1053,8 +1002,19 @@ body { min-height: 100vh; }
               <div class="tk-tag-mini short">Short</div>
             </div>
           </div>
-          <div class="tk-driver">Daiwa понизил до Outperform с Buy · valuation растянут</div>
-          <div class="tk-pct down">−0.86%<span class="tk-pct-sub">premkt</span></div>
+          <div class="tk-driver">Семис под давлением · IV rank 79</div>
+          <div class="tk-pct down">−0.94%<span class="tk-pct-sub">premkt</span></div>
+        </div>
+        <div class="focus-row">
+          <div class="tk-block">
+            <div class="tk-direction avoid">⊘</div>
+            <div>
+              <div class="tk-name">NVDA</div>
+              <div class="tk-tag-mini avoid">Avoid</div>
+            </div>
+          </div>
+          <div class="tk-driver">Pre-earnings AMC завтра · не входить</div>
+          <div class="tk-pct down">−0.64%<span class="tk-pct-sub">premkt</span></div>
         </div>
       </div>
     </div>
@@ -1068,36 +1028,36 @@ body { min-height: 100vh; }
         <div class="risk-item">
           <div class="risk-num">01</div>
           <div>
-            <div class="risk-title">Retail Sales 14:30 CET</div>
-            <div class="risk-desc">Consensus +0.5%, prior +1.7% · hot принт = ещё минус один cut в 2026 · yields рванут</div>
+            <div class="risk-title">NVDA earnings AMC 20.05</div>
+            <div class="risk-desc">Крупнейший индексный драйвер недели · IV bid на всех семисах · размер режу</div>
           </div>
         </div>
         <div class="risk-item">
           <div class="risk-num">02</div>
           <div>
-            <div class="risk-title">US10Y около 2026 high</div>
-            <div class="risk-desc">4.48% уже vs мартовский high 4.48% · пробой давит на tech-премию</div>
+            <div class="risk-title">Powell → Warsh transition</div>
+            <div class="risk-desc">10Y скакнул до 4.62% · давление на длинные техи · разочарование hawkish</div>
           </div>
         </div>
         <div class="risk-item">
           <div class="risk-num">03</div>
           <div>
-            <div class="risk-title">Trump + Xi summit</div>
-            <div class="risk-desc">Иран, редкоземы, экспорт чипов · headlines будут дёргать сектор полупроводников</div>
+            <div class="risk-title">Iran escalation</div>
+            <div class="risk-desc">WTI пробил $107 · ликвидации крипто $500M · BTC −2.3% за ночь</div>
           </div>
         </div>
         <div class="risk-item">
           <div class="risk-num">04</div>
           <div>
-            <div class="risk-title">AMAT earnings AMC</div>
-            <div class="risk-desc">IVR 101 · реакция задаст тон полупроводникам на пятницу</div>
+            <div class="risk-title">HD earnings — housing barometer</div>
+            <div class="risk-desc">Слабость HD = слабость consumer discretionary · цепочка на TOL, LEN, DHI</div>
           </div>
         </div>
         <div class="risk-item">
           <div class="risk-num">05</div>
           <div>
-            <div class="risk-title">Call Wall 7500 trap</div>
-            <div class="risk-desc">Положительная гамма + BL1 7473 = резкий отказ при подходе · OTM directional сгорает</div>
+            <div class="risk-title">SPX vs SPY gamma split</div>
+            <div class="risk-desc">SPX long gamma vs SPY short gamma · HVL 7395 на грани переключения режима</div>
           </div>
         </div>
       </div>
@@ -1110,49 +1070,91 @@ body { min-height: 100vh; }
     <div class="spx-head-row">
       <div>
         <div class="section-title">SPX Levels Ladder</div>
-        <div class="section-meta">MenthorQ gamma map · spot vs Call/Put walls</div>
+        <div class="section-meta">Карта поддержек, сопротивлений и триггеров</div>
       </div>
       <div class="spx-spot-block">
-        <div class="spx-spot-label">SPX cash</div>
-        <div class="spx-spot-val">7444.25</div>
-        <div class="spx-em">EM ±69 (±0.93%) · /ES premium +43</div>
+        <div class="spx-spot-label">SPX cash close</div>
+        <div class="spx-spot-val">7,403.05</div>
+        <div class="spx-em">0DTE EM ±84 (±1.14%)</div>
       </div>
     </div>
     <div class="ladder">
       <div class="lvl-row">
         <span class="lvl-tag r">R3</span>
-        <span class="lvl-px">7530</span>
-        <span class="lvl-note">Цель при пробое 7513</span>
+        <span class="lvl-px">7500</span>
+        <span class="lvl-note"><strong>Call Resistance</strong> · MenthorQ max GEX +88M</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag r">R2</span>
-        <span class="lvl-px">7513</span>
-        <span class="lvl-note">1D Max · верхняя граница Blindspot</span>
+        <span class="lvl-px">7475</span>
+        <span class="lvl-note">Blindspot · upper reaction zone</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag r">R1</span>
-        <span class="lvl-px">7500</span>
-        <span class="lvl-note"><strong>Call Resistance (MenthorQ)</strong> · gamma wall · дилеры продают на подходе</span>
+        <span class="lvl-px">7430</span>
+        <span class="lvl-note">Верхняя кромка коробки · bullish trigger выше</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag spot">Spot</span>
-        <span class="lvl-px spot">7444.25</span>
-        <span class="lvl-note"><strong>Consolidation 7400–7500</strong> · gamma+ режим · pinning zone · BL1 7473</span>
+        <span class="lvl-px spot">7,403</span>
+        <span class="lvl-note"><strong>Pin 7400</strong> · HVL 7395 ниже спота · режим балансирует</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag s">S1</span>
-        <span class="lvl-px">7400</span>
-        <span class="lvl-note">GEX zone upper · нижняя граница Blindspot 7398</span>
+        <span class="lvl-px">7375</span>
+        <span class="lvl-note">Нижняя кромка коробки</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag s">S2</span>
-        <span class="lvl-px">7325</span>
-        <span class="lvl-note">GEX zone 10-1 · подтверждение слабости</span>
+        <span class="lvl-px">7350</span>
+        <span class="lvl-note">Промежуточная поддержка</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag brk">BRK</span>
-        <span class="lvl-px">7295</span>
-        <span class="lvl-note"><strong>HVL · gamma flip trigger</strong> · переход в short gamma → ускорение</span>
+        <span class="lvl-px">7335</span>
+        <span class="lvl-note"><strong>Breakdown trigger</strong> · Blindspot 1 · gamma flip акселерация</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAMMA REGIME -->
+  <section class="card spx-card">
+    <div class="spx-head-row">
+      <div>
+        <div class="section-title">Gamma Regime (MenthorQ)</div>
+        <div class="section-meta">EOD 18.05.2026 · позиция дилеров по опционам</div>
+      </div>
+    </div>
+    <div>
+      <div class="gamma-row">
+        <span class="gamma-tk">SPX</span>
+        <span><span class="gamma-regime long">Long gamma</span> · Net GEX +683M · IV30 14.29%</span>
+        <span class="gamma-lvl">HVL <strong>7395</strong></span>
+        <span class="gamma-lvl">Call wall <strong>7500</strong></span>
+      </div>
+      <div class="gamma-row">
+        <span class="gamma-tk">SPY</span>
+        <span><span class="gamma-regime short">Short gamma</span> · Net GEX −226M · IV30 14.50%</span>
+        <span class="gamma-lvl">HVL <strong>739</strong></span>
+        <span class="gamma-lvl">Call wall <strong>745</strong></span>
+      </div>
+      <div class="gamma-row">
+        <span class="gamma-tk">QQQ</span>
+        <span><span class="gamma-regime short">Short gamma</span> · Net GEX −88M · IV30 20.77%</span>
+        <span class="gamma-lvl">HVL <strong>708</strong></span>
+        <span class="gamma-lvl">Call wall <strong>730</strong></span>
+      </div>
+      <div class="gamma-row">
+        <span class="gamma-tk">/ES</span>
+        <span><span class="gamma-regime long">Long gamma</span> · Net GEX +22M · IV30 14.53%</span>
+        <span class="gamma-lvl">HVL <strong>7425</strong></span>
+        <span class="gamma-lvl">Call wall <strong>7500</strong></span>
+      </div>
+      <div class="gamma-row">
+        <span class="gamma-tk">/NQ</span>
+        <span><span class="gamma-regime neutral">Neutral</span> · Net GEX −0.4M · IV30 20.94%</span>
+        <span class="gamma-lvl">HVL <strong>29080</strong></span>
+        <span class="gamma-lvl">Call wall <strong>29250</strong></span>
       </div>
     </div>
   </section>
@@ -1167,16 +1169,12 @@ body { min-height: 100vh; }
       </div>
       <div>
         <div class="simple-row avoid-row">
-          <div class="avoid-time">14:15–14:45</div>
-          <div class="avoid-text">Retail Sales + Initial Jobless Claims · бинарное движение</div>
-        </div>
-        <div class="simple-row avoid-row">
-          <div class="avoid-time">22:25–22:35</div>
-          <div class="avoid-text">AMAT earnings AMC · semi сектор после клоуза</div>
+          <div class="avoid-time">15:30–16:00</div>
+          <div class="avoid-text">HD cash open · volatility expansion в первые минуты</div>
         </div>
         <div class="simple-row avoid-row">
           <div class="avoid-time">15:30–16:30</div>
-          <div class="avoid-text">Первый час RTH без order flow подтверждения</div>
+          <div class="avoid-text">Стандартный intraday whipsaw · первый час RTH</div>
         </div>
       </div>
     </div>
@@ -1187,27 +1185,29 @@ body { min-height: 100vh; }
         <div class="section-meta">CET</div>
       </div>
       <div>
-        <div class="simple-row cal-row"><span class="cal-time">14:30</span><span class="cal-event">Retail Sales MoM · +0.5% vs +1.7%</span><span class="cal-imp high">High</span></div>
-        <div class="simple-row cal-row"><span class="cal-time">14:30</span><span class="cal-event">Core Retail Sales MoM</span><span class="cal-imp high">High</span></div>
-        <div class="simple-row cal-row"><span class="cal-time">14:30</span><span class="cal-event">Initial Jobless Claims</span><span class="cal-imp med">Med</span></div>
-        <div class="simple-row cal-row"><span class="cal-time">16:00</span><span class="cal-event">Business Inventories</span><span class="cal-imp low">Low</span></div>
-        <div class="simple-row cal-row"><span class="cal-time">22:30</span><span class="cal-event">AMAT earnings · EPS $2.66</span><span class="cal-imp med">Med</span></div>
+        <div class="simple-row cal-row"><span class="cal-time">BMO</span><span class="cal-event">$HD · earnings</span><span class="cal-imp high">High</span></div>
+        <div class="simple-row cal-row"><span class="cal-time">BMO</span><span class="cal-event">$MDT, $AS, $ZIM</span><span class="cal-imp med">Med</span></div>
+        <div class="simple-row cal-row"><span class="cal-time">14:30</span><span class="cal-event">Building Permits</span><span class="cal-imp med">Med</span></div>
+        <div class="simple-row cal-row"><span class="cal-time">14:30</span><span class="cal-event">Housing Starts</span><span class="cal-imp med">Med</span></div>
+        <div class="simple-row cal-row"><span class="cal-time">AMC</span><span class="cal-event">$TOL · earnings</span><span class="cal-imp med">Med</span></div>
+        <div class="simple-row cal-row"><span class="cal-time">AMC</span><span class="cal-event">$KEYS, $VIK</span><span class="cal-imp low">Low</span></div>
       </div>
     </div>
 
     <div class="card section-card">
       <div class="section-head">
-        <div class="section-title">Gamma Regime</div>
-        <div class="section-meta">MenthorQ</div>
+        <div class="section-title">Historical Context</div>
+        <div class="section-meta">vs SMA / regime</div>
       </div>
       <div>
-        <div class="simple-row sec-row"><span class="sec-tk">SPX</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:78%"></span></span><span class="sec-pct up">+$1.39B</span></div>
-        <div class="simple-row sec-row"><span class="sec-tk">SPY</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:42%"></span></span><span class="sec-pct up">+$745M</span></div>
-        <div class="simple-row sec-row"><span class="sec-tk">/ES</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:10%"></span></span><span class="sec-pct up">+$172M</span></div>
-        <div class="sec-divider">— VRP / IV-HV gap —</div>
-        <div class="simple-row sec-row"><span class="sec-tk">SPX</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:45%"></span></span><span class="sec-pct up">+4.5%</span></div>
-        <div class="simple-row sec-row"><span class="sec-tk">SPY</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:62%"></span></span><span class="sec-pct up">+6.2%</span></div>
-        <div class="simple-row sec-row"><span class="sec-tk">Curve</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:35%"></span></span><span class="sec-pct down">inverted</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">VIX</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:3%"></span></span><span class="sec-pct up">+0.61</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">SPY</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:92%"></span></span><span class="sec-pct up">+9.17</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">SPX</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:68%"></span></span><span class="sec-pct up">+6.76</span></div>
+        <div class="sec-divider">— ATR(14) SPY —</div>
+        <div class="simple-row sec-row"><span class="sec-tk">ATR</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:50%"></span></span><span class="sec-pct up">1.00%</span></div>
+        <div class="simple-row sec-row" style="grid-template-columns: 1fr; padding-top: 6px;">
+          <span style="font-size: 11px; color: var(--ink-3); text-align: center;">Регим: normal · defensive mode: normal</span>
+        </div>
       </div>
     </div>
 
@@ -1219,34 +1219,34 @@ body { min-height: 100vh; }
       <div class="sc-head">
         <span class="sc-badge bull">↑ Scenario A</span>
       </div>
-      <div class="sc-name">Push to Call Wall</div>
-      <div class="sc-line"><span class="sc-line-key">Trigger</span><span class="sc-line-val"><strong>SPX &gt; 7500</strong> с удержанием 15 мин после Retail Sales</span></div>
-      <div class="sc-line"><span class="sc-line-key">Target</span><span class="sc-line-val"><strong>7513 → 7530</strong> (Blindspot верх)</span></div>
-      <div class="sc-line"><span class="sc-line-key">Structure</span><span class="sc-line-val">Call debit 7500/7515 для пробоя · или call credit 7470/7460 на откате</span></div>
+      <div class="sc-name">Push to Resistance</div>
+      <div class="sc-line"><span class="sc-line-key">Trigger</span><span class="sc-line-val"><strong>SPX &gt; 7430</strong> с retest</span></div>
+      <div class="sc-line"><span class="sc-line-key">Target</span><span class="sc-line-val"><strong>7460 → 7475</strong></span></div>
+      <div class="sc-line"><span class="sc-line-key">Structure</span><span class="sc-line-val">PCS 7400/7390 или CDS 7430/7445</span></div>
     </div>
 
     <div class="scenario-full bear">
       <div class="sc-head">
         <span class="sc-badge bear">↓ Scenario B</span>
       </div>
-      <div class="sc-name">Break the Floor</div>
-      <div class="sc-line"><span class="sc-line-key">Trigger</span><span class="sc-line-val"><strong>SPX &lt; 7400</strong> после hot Retail Sales</span></div>
-      <div class="sc-line"><span class="sc-line-key">Target</span><span class="sc-line-val"><strong>7325 → 7295</strong> (HVL flip)</span></div>
-      <div class="sc-line"><span class="sc-line-key">Structure</span><span class="sc-line-val">Put debit 7400/7385 · или put credit 7350/7340 после стабилизации</span></div>
+      <div class="sc-name">Regime Flip</div>
+      <div class="sc-line"><span class="sc-line-key">Trigger</span><span class="sc-line-val"><strong>SPX &lt; 7395</strong> с retest</span></div>
+      <div class="sc-line"><span class="sc-line-key">Target</span><span class="sc-line-val"><strong>7350 → 7335</strong> (BL1)</span></div>
+      <div class="sc-line"><span class="sc-line-key">Structure</span><span class="sc-line-val">CCS 7430/7440 или PDS 7395/7375</span></div>
     </div>
 
     <div class="scenario-full flat">
       <div class="sc-head">
         <span class="sc-badge flat">⊘ Avoid</span>
       </div>
-      <div class="sc-name">Stay Flat</div>
-      <div class="sc-line"><span class="sc-line-key">Когда</span><span class="sc-line-val">Застой 7440–7460 без OF · gamma+ pinning к 7445</span></div>
-      <div class="sc-line"><span class="sc-line-key">Правило</span><span class="sc-line-val">IC 7400/7395 / 7510/7515 · Mean-reversion от уровней BL</span></div>
+      <div class="sc-name">Pin 7400</div>
+      <div class="sc-line"><span class="sc-line-key">Когда</span><span class="sc-line-val">Консолидация 7395–7430 · long gamma SPX/+ES</span></div>
+      <div class="sc-line"><span class="sc-line-key">Правило</span><span class="sc-line-val">NVDA earnings завтра · режу размер · IV expansion с обеда</span></div>
     </div>
   </section>
 
   <footer class="footer">
-    <div>Premarket Context Engine · v2.5.1 · Daily mode · 14.05.2026</div>
+    <div>Premarket Context Engine · v2.5.1 · Daily mode</div>
     <div class="disclaimer">Не является инвестиционной рекомендацией.</div>
   </footer>
 
