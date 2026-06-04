@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premarket Brief · 03.06.2026</title>
+<title>Premarket Brief · 04.06.2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -64,715 +64,167 @@ body { min-height: 100vh; }
   padding: 28px 32px 56px;
 }
 
-/* HEADER */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 28px;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 18px;
-  color: var(--ink);
-}
-.logo-mark {
-  width: 36px; height: 36px;
-  background: var(--ink);
-  border-radius: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: 800;
-  font-size: 15px;
-}
-.crumbs {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--ink-3);
-  font-size: 16px;
-  font-weight: 500;
-  margin-left: 4px;
-}
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+.logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; color: var(--ink); }
+.logo-mark { width: 36px; height: 36px; background: var(--ink); border-radius: 9px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: 15px; }
+.crumbs { display: flex; align-items: center; gap: 8px; color: var(--ink-3); font-size: 16px; font-weight: 500; margin-left: 4px; }
 .crumbs::before { content: "›"; color: var(--ink-4); }
 .crumbs strong { color: var(--ink); font-weight: 600; }
-
-.header-meta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 15px;
-  color: var(--ink-3);
-}
-.live-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--green-bg);
-  color: var(--green-deep);
-  padding: 7px 14px;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 13px;
-}
-.live-dot {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--green);
-  animation: pulse 1.6s infinite;
-}
+.header-meta { display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--ink-3); }
+.live-pill { display: inline-flex; align-items: center; gap: 6px; background: var(--green-bg); color: var(--green-deep); padding: 7px 14px; border-radius: 999px; font-weight: 600; font-size: 13px; }
+.live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 1.6s infinite; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
-
-.share-btn {
-  background: var(--green);
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 14px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: inherit;
-  transition: background 0.2s;
-}
+.share-btn { background: var(--green); color: white; border: none; padding: 10px 18px; border-radius: 10px; font-weight: 600; font-size: 14px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-family: inherit; transition: background 0.2s; }
 .share-btn:hover { background: var(--green-deep); }
 
-/* OVERVIEW HEAD */
-.overview-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 20px;
-}
-.overview-head h1 {
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--ink);
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  margin-bottom: 4px;
-}
-.overview-head p {
-  color: var(--ink-3);
-  font-size: 16px;
-}
-.date-badge {
-  background: white;
-  border: 1px solid var(--line);
-  padding: 10px 16px;
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--ink-2);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
+.overview-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px; }
+.overview-head h1 { font-size: 32px; font-weight: 700; color: var(--ink); letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 4px; }
+.overview-head p { color: var(--ink-3); font-size: 16px; }
+.date-badge { background: white; border: 1px solid var(--line); padding: 10px 16px; border-radius: 10px; font-size: 14px; font-weight: 600; color: var(--ink-2); display: inline-flex; align-items: center; gap: 8px; }
 
-/* HERO ROW: 3 main cards */
-.hero {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.card {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 22px 24px;
-  position: relative;
-}
-
-.card-head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-.card-icon {
-  width: 40px; height: 40px;
-  border-radius: 11px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
+.hero { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; position: relative; }
+.card-head { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.card-icon { width: 40px; height: 40px; border-radius: 11px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .card-icon svg { width: 22px; height: 22px; }
 .card-icon.violet { background: var(--violet-bg); color: var(--violet); }
 .card-icon.amber { background: var(--amber-bg); color: var(--amber); }
 .card-icon.green { background: var(--green-bg); color: var(--green-deep); }
 .card-icon.red { background: var(--red-bg); color: var(--red); }
 .card-icon.dark { background: var(--ink); color: white; }
+.card-title { font-size: 18px; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
+.card-subtitle { font-size: 13px; color: var(--ink-3); margin-top: 2px; }
 
-.card-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--ink);
-  letter-spacing: -0.01em;
-}
-.card-subtitle {
-  font-size: 13px;
-  color: var(--ink-3);
-  margin-top: 2px;
-}
-
-/* BIAS hero card */
-.bias-card {
-  background: linear-gradient(135deg, #14a36e 0%, #0e8b5d 100%);
-  color: white;
-  border: none;
-  position: relative;
-  overflow: hidden;
-}
-.bias-card::after {
-  content: '';
-  position: absolute;
-  top: -40%; right: -10%;
-  width: 280px; height: 280px;
-  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
-  pointer-events: none;
-}
-.bias-card .card-icon {
-  background: rgba(255,255,255,0.18);
-  color: white;
-}
+.bias-card { background: linear-gradient(135deg, #14a36e 0%, #0e8b5d 100%); color: white; border: none; position: relative; overflow: hidden; }
+.bias-card::after { content: ''; position: absolute; top: -40%; right: -10%; width: 280px; height: 280px; background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%); pointer-events: none; }
+.bias-card .card-icon { background: rgba(255,255,255,0.18); color: white; }
 .bias-card .card-title { color: white; }
 .bias-card .card-subtitle { color: rgba(255,255,255,0.7); }
+.bias-value { display: flex; align-items: baseline; gap: 14px; margin-bottom: 14px; flex-wrap: wrap; }
+.bias-word { font-size: 44px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; text-transform: capitalize; }
+.bias-strength-pill { background: rgba(255,255,255,0.18); color: white; padding: 5px 12px; border-radius: 999px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+.bias-narrative { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.92); }
+.bias-narrative strong { color: white; font-weight: 700; }
 
-.bias-value {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-  margin-bottom: 14px;
-  flex-wrap: wrap;
-}
-.bias-word {
-  font-size: 44px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1;
-  text-transform: capitalize;
-}
-.bias-strength-pill {
-  background: rgba(255,255,255,0.18);
-  color: white;
-  padding: 5px 12px;
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.bias-narrative {
-  font-size: 15px;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.92);
-}
-.bias-narrative strong {
-  color: white;
-  font-weight: 700;
-}
-
-/* RISK CARD (hero) */
-.risk-hero-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.risk-hero-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 15px;
-  color: var(--ink-2);
-  padding: 6px 0;
-}
-.risk-hero-num {
-  width: 24px; height: 24px;
-  background: var(--amber-bg);
-  color: var(--amber);
-  border-radius: 7px;
-  font-size: 12px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
+.risk-hero-list { display: flex; flex-direction: column; gap: 10px; }
+.risk-hero-row { display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--ink-2); padding: 6px 0; }
+.risk-hero-num { width: 24px; height: 24px; background: var(--amber-bg); color: var(--amber); border-radius: 7px; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .risk-hero-row strong { color: var(--ink); font-weight: 600; }
 
-/* 0DTE CARD */
-.scenario-mini {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.scenario-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--line);
-}
+.scenario-mini { display: flex; flex-direction: column; gap: 12px; }
+.scenario-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
 .scenario-row:last-child { border-bottom: none; padding-bottom: 0; }
-.sc-arrow {
-  width: 32px; height: 32px;
-  border-radius: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  font-weight: 700;
-  flex-shrink: 0;
-}
+.sc-arrow { width: 32px; height: 32px; border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; flex-shrink: 0; }
 .sc-arrow.bull { background: var(--green-bg); color: var(--green-deep); }
 .sc-arrow.bear { background: var(--red-bg); color: var(--red); }
 .sc-arrow.flat { background: var(--surface-2); color: var(--ink-3); border: 1px solid var(--line); }
 .sc-text { font-size: 15px; color: var(--ink-2); flex: 1; line-height: 1.4; }
 .sc-text strong { color: var(--ink); font-weight: 600; }
 
-/* MACRO STRIP */
-.macro-strip {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 22px 24px;
-  margin-bottom: 20px;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 0;
-}
-.macro-cell {
-  padding: 0 16px;
-  border-right: 1px solid var(--line);
-}
+.macro-strip { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; margin-bottom: 20px; display: grid; grid-template-columns: repeat(8, 1fr); gap: 0; }
+.macro-cell { padding: 0 16px; border-right: 1px solid var(--line); }
 .macro-cell:first-child { padding-left: 0; }
 .macro-cell:last-child { border-right: none; padding-right: 0; }
-.macro-tk {
-  font-size: 12px;
-  color: var(--ink-3);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
-.macro-val {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--ink);
-  letter-spacing: -0.02em;
-  margin-bottom: 4px;
-  line-height: 1.1;
-}
-.macro-d {
-  font-size: 13px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  padding: 3px 8px;
-  border-radius: 6px;
-}
+.macro-tk { font-size: 12px; color: var(--ink-3); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 6px; }
+.macro-val { font-size: 22px; font-weight: 700; color: var(--ink); letter-spacing: -0.02em; margin-bottom: 4px; line-height: 1.1; }
+.macro-d { font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 3px; padding: 3px 8px; border-radius: 6px; }
 .macro-d.up { background: var(--green-bg); color: var(--green-deep); }
 .macro-d.down { background: var(--red-bg); color: var(--red); }
 .macro-d.flat { background: var(--surface-2); color: var(--ink-3); }
 
-/* MAIN SPLIT */
-.main-split {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-/* FOCUS TABLE */
+.main-split { display: grid; grid-template-columns: 1.3fr 1fr; gap: 20px; margin-bottom: 20px; }
 .section-card { padding: 0; overflow: hidden; }
-.section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 24px 16px;
-  border-bottom: 1px solid var(--line);
-}
-.section-title {
-  font-size: 19px;
-  font-weight: 700;
-  color: var(--ink);
-  letter-spacing: -0.01em;
-}
-.section-meta {
-  font-size: 13px;
-  color: var(--ink-3);
-  font-weight: 500;
-}
-
-.focus-row {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 16px;
-  padding: 14px 24px;
-  border-bottom: 1px solid var(--line);
-  transition: background 0.15s;
-}
+.section-head { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px 16px; border-bottom: 1px solid var(--line); }
+.section-title { font-size: 19px; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
+.section-meta { font-size: 13px; color: var(--ink-3); font-weight: 500; }
+.focus-row { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 16px; padding: 14px 24px; border-bottom: 1px solid var(--line); transition: background 0.15s; }
 .focus-row:last-child { border-bottom: none; }
 .focus-row:hover { background: var(--surface-2); }
-
-.tk-block {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.tk-direction {
-  width: 32px; height: 32px;
-  border-radius: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: 800;
-  flex-shrink: 0;
-}
+.tk-block { display: flex; align-items: center; gap: 10px; }
+.tk-direction { width: 32px; height: 32px; border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800; flex-shrink: 0; }
 .tk-direction.long { background: var(--green-bg); color: var(--green-deep); }
 .tk-direction.short { background: var(--red-bg); color: var(--red); }
-.tk-name {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--ink);
-  letter-spacing: -0.01em;
-}
-.tk-tag-mini {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-top: 1px;
-}
+.tk-name { font-size: 18px; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
+.tk-tag-mini { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 1px; }
 .tk-tag-mini.long { color: var(--green-deep); }
 .tk-tag-mini.short { color: var(--red); }
-
-.tk-driver {
-  font-size: 15px;
-  color: var(--ink-2);
-  line-height: 1.4;
-}
-
-.tk-pct {
-  font-size: 19px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  text-align: right;
-  white-space: nowrap;
-}
+.tk-driver { font-size: 15px; color: var(--ink-2); line-height: 1.4; }
+.tk-pct { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; text-align: right; white-space: nowrap; }
 .tk-pct.up { color: var(--green-deep); }
 .tk-pct.down { color: var(--red); }
-.tk-pct-sub {
-  display: block;
-  font-size: 11px;
-  color: var(--ink-4);
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-top: 2px;
-}
+.tk-pct-sub { display: block; font-size: 11px; color: var(--ink-4); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 2px; }
 
-/* RISK FULL */
 .risk-list { padding: 6px 0; }
-.risk-item {
-  padding: 14px 24px;
-  border-bottom: 1px solid var(--line);
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 14px;
-  align-items: start;
-}
+.risk-item { padding: 14px 24px; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; }
 .risk-item:last-child { border-bottom: none; }
-.risk-num {
-  width: 28px; height: 28px;
-  border-radius: 8px;
-  background: var(--amber-bg);
-  color: var(--amber);
-  font-size: 12px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.risk-title {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--ink);
-  margin-bottom: 2px;
-  letter-spacing: -0.005em;
-}
+.risk-num { width: 28px; height: 28px; border-radius: 8px; background: var(--amber-bg); color: var(--amber); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.risk-title { font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 2px; letter-spacing: -0.005em; }
 .risk-desc { color: var(--ink-3); font-size: 14px; line-height: 1.45; }
 
-/* SPX LADDER */
-.spx-card {
-  margin-bottom: 20px;
-  padding: 0;
-}
-.spx-head-row {
-  padding: 22px 24px 18px;
-  border-bottom: 1px solid var(--line);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.spx-spot-block {
-  text-align: right;
-}
-.spx-spot-label {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--ink-3);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: 2px;
-}
-.spx-spot-val {
-  font-size: 30px;
-  font-weight: 800;
-  color: var(--ink);
-  letter-spacing: -0.025em;
-  line-height: 1;
-}
-.spx-em {
-  font-size: 14px;
-  color: var(--ink-3);
-  font-weight: 500;
-  margin-top: 2px;
-}
-
+.spx-card { margin-bottom: 20px; padding: 0; }
+.spx-head-row { padding: 22px 24px 18px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; }
+.spx-spot-block { text-align: right; }
+.spx-spot-label { font-size: 12px; font-weight: 600; color: var(--ink-3); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 2px; }
+.spx-spot-val { font-size: 30px; font-weight: 800; color: var(--ink); letter-spacing: -0.025em; line-height: 1; }
+.spx-em { font-size: 14px; color: var(--ink-3); font-weight: 500; margin-top: 2px; }
 .ladder { padding: 12px 24px 18px; }
-.lvl-row {
-  display: grid;
-  grid-template-columns: 70px 110px 1fr;
-  align-items: center;
-  gap: 16px;
-  padding: 13px 0;
-  border-bottom: 1px solid var(--line);
-}
+.lvl-row { display: grid; grid-template-columns: 70px 110px 1fr; align-items: center; gap: 16px; padding: 13px 0; border-bottom: 1px solid var(--line); }
 .lvl-row:last-child { border-bottom: none; }
-
-.lvl-tag {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 5px 10px;
-  border-radius: 6px;
-  text-align: center;
-  display: inline-block;
-}
+.lvl-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 10px; border-radius: 6px; text-align: center; display: inline-block; }
 .lvl-tag.r { background: var(--red-bg); color: var(--red); }
 .lvl-tag.s { background: var(--green-bg); color: var(--green-deep); }
 .lvl-tag.brk { background: var(--red); color: white; }
 .lvl-tag.spot { background: var(--ink); color: white; }
-
-.lvl-px {
-  font-size: 23px;
-  font-weight: 700;
-  color: var(--ink);
-  letter-spacing: -0.02em;
-}
+.lvl-px { font-size: 23px; font-weight: 700; color: var(--ink); letter-spacing: -0.02em; }
 .lvl-px.spot { color: var(--green-deep); }
-
-.lvl-note {
-  font-size: 14px;
-  color: var(--ink-3);
-  line-height: 1.4;
-}
+.lvl-note { font-size: 14px; color: var(--ink-3); line-height: 1.4; }
 .lvl-note strong { color: var(--ink-2); font-weight: 600; }
 
-/* BOTTOM ROW */
-.bottom-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.simple-row {
-  padding: 12px 24px;
-  border-bottom: 1px solid var(--line);
-  display: grid;
-  align-items: center;
-  gap: 14px;
-}
+.bottom-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+.simple-row { padding: 12px 24px; border-bottom: 1px solid var(--line); display: grid; align-items: center; gap: 14px; }
 .simple-row:last-child { border-bottom: none; }
-
 .avoid-row { grid-template-columns: auto 1fr; }
-.avoid-time {
-  background: var(--amber-bg);
-  color: var(--amber);
-  padding: 7px 12px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-.avoid-text {
-  font-size: 14px;
-  color: var(--ink-2);
-  line-height: 1.45;
-}
-
+.avoid-time { background: var(--amber-bg); color: var(--amber); padding: 7px 12px; border-radius: 8px; font-size: 14px; font-weight: 700; white-space: nowrap; }
+.avoid-text { font-size: 14px; color: var(--ink-2); line-height: 1.45; }
 .cal-row { grid-template-columns: 60px 1fr auto; }
-.cal-time {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--ink);
-}
+.cal-time { font-size: 15px; font-weight: 700; color: var(--ink); }
 .cal-event { font-size: 14px; color: var(--ink-2); }
-.cal-imp {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 999px;
-}
+.cal-imp { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
 .cal-imp.high { background: var(--red-bg); color: var(--red); }
 .cal-imp.med { background: var(--amber-bg); color: var(--amber); }
 .cal-imp.low { background: var(--surface-2); color: var(--ink-3); }
-
 .sec-row { grid-template-columns: 56px 1fr auto; }
-.sec-tk {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--ink);
-}
-.sec-bar {
-  height: 9px;
-  background: var(--surface-2);
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
-}
+.sec-tk { font-size: 15px; font-weight: 700; color: var(--ink); }
+.sec-bar { height: 9px; background: var(--surface-2); border-radius: 4px; overflow: hidden; position: relative; }
 .sec-bar-fill { height: 100%; border-radius: 4px; }
 .sec-bar-fill.up { background: var(--green); }
 .sec-bar-fill.down { background: var(--red); margin-left: auto; }
-.sec-pct {
-  font-size: 15px;
-  font-weight: 700;
-  text-align: right;
-  min-width: 54px;
-}
+.sec-pct { font-size: 15px; font-weight: 700; text-align: right; min-width: 54px; }
 .sec-pct.up { color: var(--green-deep); }
 .sec-pct.down { color: var(--red); }
-.sec-divider {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-4);
-  padding: 9px 24px;
-  text-align: center;
-  border-top: 1px dashed var(--line-2);
-  border-bottom: 1px dashed var(--line-2);
-  background: var(--surface-2);
-}
+.sec-divider { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-4); padding: 9px 24px; text-align: center; border-top: 1px dashed var(--line-2); border-bottom: 1px dashed var(--line-2); background: var(--surface-2); }
 
-/* SCENARIOS FULL */
-.scenarios {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-.scenario-full {
-  padding: 22px 24px;
-  border-radius: var(--radius);
-  background: var(--surface);
-  border: 1px solid var(--line);
-  position: relative;
-  overflow: hidden;
-}
-.scenario-full::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  height: 100%;
-  width: 5px;
-}
+.scenarios { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+.scenario-full { padding: 22px 24px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); position: relative; overflow: hidden; }
+.scenario-full::before { content: ''; position: absolute; top: 0; left: 0; height: 100%; width: 5px; }
 .scenario-full.bull::before { background: var(--green); }
 .scenario-full.bear::before { background: var(--red); }
 .scenario-full.flat::before { background: var(--amber); }
-
-.sc-head {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 14px;
-}
-.sc-badge {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 6px 13px;
-  border-radius: 999px;
-}
+.sc-head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.sc-badge { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 13px; border-radius: 999px; }
 .sc-badge.bull { background: var(--green-bg); color: var(--green-deep); }
 .sc-badge.bear { background: var(--red-bg); color: var(--red); }
 .sc-badge.flat { background: var(--amber-bg); color: var(--amber); }
-
-.sc-name {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--ink);
-  letter-spacing: -0.015em;
-  margin-bottom: 14px;
-}
-
-.sc-line {
-  display: grid;
-  grid-template-columns: 90px 1fr;
-  gap: 10px;
-  padding: 9px 0;
-  border-bottom: 1px solid var(--line);
-  font-size: 14px;
-}
+.sc-name { font-size: 20px; font-weight: 700; color: var(--ink); letter-spacing: -0.015em; margin-bottom: 14px; }
+.sc-line { display: grid; grid-template-columns: 90px 1fr; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
 .sc-line:last-child { border-bottom: none; }
-.sc-line-key {
-  color: var(--ink-3);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  font-size: 11px;
-  padding-top: 2px;
-}
-.sc-line-val {
-  color: var(--ink-2);
-  line-height: 1.45;
-}
+.sc-line-key { color: var(--ink-3); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; font-size: 11px; padding-top: 2px; }
+.sc-line-val { color: var(--ink-2); line-height: 1.45; }
 .sc-line-val strong { color: var(--ink); font-weight: 700; }
 
-/* FOOTER */
-.footer {
-  padding-top: 22px;
-  border-top: 1px solid var(--line);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
-  color: var(--ink-4);
-}
+.footer { padding-top: 22px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--ink-4); }
 .footer .disclaimer { font-style: italic; color: var(--ink-3); }
 
-/* RESPONSIVE */
 @media (max-width: 1100px) {
   .hero, .main-split, .bottom-row, .scenarios { grid-template-columns: 1fr; }
   .macro-strip { grid-template-columns: repeat(4, 1fr); gap: 16px 0; }
@@ -790,14 +242,8 @@ body { min-height: 100vh; }
   .lvl-px { font-size: 19px; }
 }
 
-/* STAGGERED ENTRY */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.card, .scenario-full, .macro-strip {
-  animation: fadeUp 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
-}
+@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.card, .scenario-full, .macro-strip { animation: fadeUp 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) backwards; }
 .hero .card:nth-child(1) { animation-delay: 0.05s; }
 .hero .card:nth-child(2) { animation-delay: 0.1s; }
 .hero .card:nth-child(3) { animation-delay: 0.15s; }
@@ -816,7 +262,6 @@ body { min-height: 100vh; }
 <body>
 <div class="container">
 
-  <!-- HEADER -->
   <header class="header">
     <div style="display: flex; align-items: center; gap: 4px;">
       <div class="logo">
@@ -827,26 +272,23 @@ body { min-height: 100vh; }
     </div>
     <div class="header-meta">
       <span class="live-pill"><span class="live-dot"></span>Pre-market live</span>
-      <span>10:38 CET</span>
+      <span>10:30 CET</span>
       <button class="share-btn">Share
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
       </button>
     </div>
   </header>
 
-  <!-- OVERVIEW HEAD -->
   <div class="overview-head">
     <div>
       <h1>Overview</h1>
       <p>Структура сессии · что важно знать до открытия рынка</p>
     </div>
-    <div class="date-badge">📅 Среда, 3 июня 2026 · Open in 04h 52m</div>
+    <div class="date-badge">📅 Четверг, 4 июня 2026 · Open in 05h 00m</div>
   </div>
 
-  <!-- HERO: 3 main cards -->
   <section class="hero">
 
-    <!-- BIAS -->
     <div class="card bias-card">
       <div class="card-head">
         <div class="card-icon">
@@ -858,15 +300,14 @@ body { min-height: 100vh; }
         </div>
       </div>
       <div class="bias-value">
-        <div class="bias-word">Mixed Bullish</div>
+        <div class="bias-word">Mixed</div>
         <div class="bias-strength-pill">Low</div>
       </div>
       <div class="bias-narrative">
-        Фьючерсы плоские (<strong>/ES −0.03%</strong>) после рекордного закрытия SPX <strong>7609.78</strong>. Тянут только техи и чипы — <strong>SMH +18.6% RS</strong>, остальное отстаёт от рынка. День данных: <strong>ADP 14:15</strong>, <strong>ISM Services 16:00</strong>, отчёт <strong>AVGO</strong> после закрытия. VIX 16.1 ниже своей средней — спокойно, но в пятницу отчёт по найму.
+        Уклон смешанный, скорее вниз. <strong>/ES на 13 пунктов ниже</strong> вчерашнего закрытия cash, полупроводники откатывают после отчёта <strong>AVGO</strong>. VIX <strong>16.4</strong> — спокойно, дилеры по SPX держат длинную гамму, гасят рывки. Откат локальный: тренд цел, SPX <strong>+6% над MA50</strong>, индекс <strong>+10% над MA200</strong>. Ключ — <strong>7495</strong> (точка перелома режима).
       </div>
     </div>
 
-    <!-- TOP RISKS -->
     <div class="card">
       <div class="card-head">
         <div class="card-icon amber">
@@ -878,15 +319,14 @@ body { min-height: 100vh; }
         </div>
       </div>
       <div class="risk-hero-list">
-        <div class="risk-hero-row"><span class="risk-hero-num">1</span><span><strong>ADP</strong> · превью к NFP пятницы</span></div>
-        <div class="risk-hero-row"><span class="risk-hero-num">2</span><span><strong>AVGO earnings</strong> · AMC · gap-риск чипов</span></div>
-        <div class="risk-hero-row"><span class="risk-hero-num">3</span><span><strong>SPX на рекорде</strong> · RSI перегрет</span></div>
-        <div class="risk-hero-row"><span class="risk-hero-num">4</span><span><strong>ISM Services</strong> · реакция в 16:00</span></div>
-        <div class="risk-hero-row"><span class="risk-hero-num">5</span><span><strong>Узкое лидерство</strong> · только техи/чипы</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">1</span><span><strong>Откат полупроводников</strong> · после AVGO</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">2</span><span><strong>Азия в минусе</strong> · техи под давлением</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">3</span><span><strong>10Y +0.81%</strong> · давит на дюрацию</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">4</span><span><strong>SMH перегрет</strong> · +26% за месяц</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">5</span><span><strong>DOCU / LULU</strong> · отчёты AMC</span></div>
       </div>
     </div>
 
-    <!-- 0DTE -->
     <div class="card">
       <div class="card-head">
         <div class="card-icon dark">
@@ -900,128 +340,126 @@ body { min-height: 100vh; }
       <div class="scenario-mini">
         <div class="scenario-row">
           <div class="sc-arrow bull">↑</div>
-          <div class="sc-text">Hold &gt; <strong>7650</strong> на объёме → <strong>7687 / 7700</strong></div>
+          <div class="sc-text">Hold &gt; <strong>7540</strong> → grind to <strong>7600 / 7625</strong></div>
         </div>
         <div class="scenario-row">
           <div class="sc-arrow bear">↓</div>
-          <div class="sc-text">Break <strong>7563</strong> → target <strong>7533 / 7473</strong></div>
+          <div class="sc-text">Break <strong>7495</strong> → target <strong>7440 / 7400</strong></div>
         </div>
         <div class="scenario-row">
           <div class="sc-arrow flat">⊘</div>
-          <div class="sc-text">Реакция на ADP/ISM в первые 30 мин — flat</div>
+          <div class="sc-text">Stuck 7540–7600 · гамма-демпфирование</div>
         </div>
       </div>
     </div>
 
   </section>
 
-  <!-- MACRO STRIP -->
   <section class="macro-strip">
     <div class="macro-cell">
       <div class="macro-tk">ES</div>
-      <div class="macro-val">7621.13</div>
-      <span class="macro-d down">−0.03%</span>
+      <div class="macro-val">7541.00</div>
+      <span class="macro-d down">−13 vs cash</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">NQ</div>
-      <div class="macro-val">30,733.63</div>
-      <span class="macro-d up">+0.07%</span>
+      <div class="macro-val">30,371</div>
+      <span class="macro-d flat">—</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">VIX</div>
-      <div class="macro-val">16.10</div>
-      <span class="macro-d up">+2.09%</span>
+      <div class="macro-val">16.37</div>
+      <span class="macro-d up">+1.81%</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">DXY</div>
-      <div class="macro-val">99.35</div>
-      <span class="macro-d up">+0.13%</span>
+      <div class="macro-val">99.469</div>
+      <span class="macro-d down">−0.06%</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">10Y</div>
-      <div class="macro-val">4.455%</div>
-      <span class="macro-d down">−0.45%</span>
+      <div class="macro-val">4.491%</div>
+      <span class="macro-d up">+0.81%</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">WTI</div>
-      <div class="macro-val">96.05</div>
-      <span class="macro-d flat">—</span>
+      <div class="macro-val">95.26</div>
+      <span class="macro-d down">−0.79%</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">Gold</div>
-      <div class="macro-val">409.08</div>
-      <span class="macro-d flat">—</span>
+      <div class="macro-val">4,489</div>
+      <span class="macro-d up">+1.17%</span>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">BTC</div>
-      <div class="macro-val">66,999.63</div>
-      <span class="macro-d up">+0.44%</span>
+      <div class="macro-val">63,447</div>
+      <span class="macro-d down">−0.89%</span>
     </div>
   </section>
 
-  <!-- MAIN SPLIT: Focus + Risk full -->
   <section class="main-split">
 
     <div class="card section-card">
       <div class="section-head">
         <div class="section-title">In Focus</div>
-        <div class="section-meta">premarket movers · 5</div>
+        <div class="section-meta">Премаркет-движения</div>
       </div>
       <div>
         <div class="focus-row">
           <div class="tk-block">
-            <div class="tk-direction long">↑</div>
+            <div class="tk-direction short">↓</div>
             <div>
               <div class="tk-name">MRVL</div>
-              <div class="tk-tag-mini long">Long</div>
+              <div class="tk-tag-mini short">Down</div>
             </div>
           </div>
-          <div class="tk-driver">Продолжение отчётного скачка · AI / чипы · IVR 83</div>
-          <div class="tk-pct up">+13.82%<span class="tk-pct-sub">premkt</span></div>
-        </div>
-        <div class="focus-row">
-          <div class="tk-block">
-            <div class="tk-direction long">↑</div>
-            <div>
-              <div class="tk-name">AVGO</div>
-              <div class="tk-tag-mini long">Long</div>
-            </div>
-          </div>
-          <div class="tk-driver">Позиционирование под отчёт сегодня AMC · IVR 80</div>
-          <div class="tk-pct up">+3.44%<span class="tk-pct-sub">premkt</span></div>
-        </div>
-        <div class="focus-row">
-          <div class="tk-block">
-            <div class="tk-direction long">↑</div>
-            <div>
-              <div class="tk-name">DELL</div>
-              <div class="tk-tag-mini long">Long</div>
-            </div>
-          </div>
-          <div class="tk-driver">Спрос на AI-серверы · эхо HPE · IVR 88</div>
-          <div class="tk-pct up">+0.76%<span class="tk-pct-sub">premkt</span></div>
+          <div class="tk-driver">Откат после ралли +47% за два дня · IVR 110</div>
+          <div class="tk-pct down">−5.26%<span class="tk-pct-sub">premkt</span></div>
         </div>
         <div class="focus-row">
           <div class="tk-block">
             <div class="tk-direction short">↓</div>
             <div>
-              <div class="tk-name">PLTR</div>
-              <div class="tk-tag-mini short">Short</div>
+              <div class="tk-name">MU</div>
+              <div class="tk-tag-mini short">Down</div>
             </div>
           </div>
-          <div class="tk-driver">Откат после ралли · IVR 35</div>
-          <div class="tk-pct down">−1.72%<span class="tk-pct-sub">premkt</span></div>
+          <div class="tk-driver">Полупроводники под давлением · IVR 96 · earnings 24.06</div>
+          <div class="tk-pct down">−3.79%<span class="tk-pct-sub">premkt</span></div>
         </div>
         <div class="focus-row">
           <div class="tk-block">
             <div class="tk-direction short">↓</div>
             <div>
               <div class="tk-name">AMD</div>
-              <div class="tk-tag-mini short">Short</div>
+              <div class="tk-tag-mini short">Down</div>
             </div>
           </div>
-          <div class="tk-driver">Фиксация в чипах · IVR 89</div>
-          <div class="tk-pct down">−1.01%<span class="tk-pct-sub">premkt</span></div>
+          <div class="tk-driver">Распродажа группы · IVR 93</div>
+          <div class="tk-pct down">−2.98%<span class="tk-pct-sub">premkt</span></div>
+        </div>
+        <div class="focus-row">
+          <div class="tk-block">
+            <div class="tk-direction long">↑</div>
+            <div>
+              <div class="tk-name">CRM</div>
+              <div class="tk-tag-mini long">Up</div>
+            </div>
+          </div>
+          <div class="tk-driver">Восстановление после отчёта 27.05 · IVR 56</div>
+          <div class="tk-pct up">+1.36%<span class="tk-pct-sub">premkt</span></div>
+        </div>
+        <div class="focus-row">
+          <div class="tk-block">
+            <div class="tk-direction long">↑</div>
+            <div>
+              <div class="tk-name">PLTR</div>
+              <div class="tk-tag-mini long">Up</div>
+            </div>
+          </div>
+          <div class="tk-driver">Слабый рост против общего отката техов</div>
+          <div class="tk-pct up">+1.28%<span class="tk-pct-sub">premkt</span></div>
         </div>
       </div>
     </div>
@@ -1029,28 +467,42 @@ body { min-height: 100vh; }
     <div class="card section-card">
       <div class="section-head">
         <div class="section-title">Risk Themes</div>
-        <div class="section-meta">3 · что ломает сетап</div>
+        <div class="section-meta">что ломает сетап</div>
       </div>
       <div class="risk-list">
         <div class="risk-item">
           <div class="risk-num">01</div>
           <div>
-            <div class="risk-title">ADP как превью к NFP</div>
-            <div class="risk-desc">Реакция днём задаёт позиционирование на конец недели</div>
+            <div class="risk-title">Откат в полупроводниках</div>
+            <div class="risk-desc">Фиксация прибыли после отчёта AVGO (вчера AMC) в перегретой группе SMH +25.9% за месяц</div>
           </div>
         </div>
         <div class="risk-item">
           <div class="risk-num">02</div>
           <div>
-            <div class="risk-title">AVGO после закрытия</div>
-            <div class="risk-desc">Двигает весь сектор чипов · gap-риск на четверг</div>
+            <div class="risk-title">Азиатская сессия вниз</div>
+            <div class="risk-desc">Техи под давлением на старте четверга</div>
           </div>
         </div>
         <div class="risk-item">
           <div class="risk-num">03</div>
           <div>
-            <div class="risk-title">SPX на рекорде, RSI перегрет</div>
-            <div class="risk-desc">Слабый принт = триггер фиксации</div>
+            <div class="risk-title">Рост доходности 10Y</div>
+            <div class="risk-desc">+0.81% до 4.491% · давление на длинную дюрацию и техи</div>
+          </div>
+        </div>
+        <div class="risk-item">
+          <div class="risk-num">04</div>
+          <div>
+            <div class="risk-title">Узкая ширина рынка</div>
+            <div class="risk-desc">Всё тянут полупроводники и техи, 11 секторов остывают</div>
+          </div>
+        </div>
+        <div class="risk-item">
+          <div class="risk-num">05</div>
+          <div>
+            <div class="risk-title">Earnings AMC</div>
+            <div class="risk-desc">DOCU и LULU после закрытия · на сессию не влияют, дёрнут завтра</div>
           </div>
         </div>
       </div>
@@ -1058,7 +510,6 @@ body { min-height: 100vh; }
 
   </section>
 
-  <!-- SPX LADDER -->
   <section class="card spx-card">
     <div class="spx-head-row">
       <div>
@@ -1066,51 +517,50 @@ body { min-height: 100vh; }
         <div class="section-meta">Карта поддержек, сопротивлений и триггеров</div>
       </div>
       <div class="spx-spot-block">
-        <div class="spx-spot-label">SPX cash (last close)</div>
-        <div class="spx-spot-val">7609.78</div>
-        <div class="spx-em">0DTE move ±1.01% (7533 / 7687)</div>
+        <div class="spx-spot-label">SPX cash</div>
+        <div class="spx-spot-val">7553.68</div>
+        <div class="spx-em">EM ±77.9 (±1.03%)</div>
       </div>
     </div>
     <div class="ladder">
       <div class="lvl-row">
         <span class="lvl-tag r">R3</span>
-        <span class="lvl-px">7700</span>
-        <span class="lvl-note"><strong>Gamma pin / Call Wall</strong> · плотная стена, выше ход тяжёлый</span>
+        <span class="lvl-px">7882</span>
+        <span class="lvl-note">Blindspot верхний · дальняя цель</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag r">R2</span>
-        <span class="lvl-px">7687</span>
-        <span class="lvl-note">Верх 0DTE expected move</span>
+        <span class="lvl-px">7700</span>
+        <span class="lvl-note"><strong>Call Resistance</strong> · потолок, продажи дилеров</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag r">R1</span>
-        <span class="lvl-px">7650</span>
-        <span class="lvl-note">Ближнее сопротивление · bullish trigger выше на объёме</span>
+        <span class="lvl-px">7600</span>
+        <span class="lvl-note"><strong>Gamma pin</strong> · сильная концентрация · 0DTE Call Res 7625</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag spot">Spot</span>
-        <span class="lvl-px spot">7609.78</span>
-        <span class="lvl-note"><strong>Consolidation 7563–7700</strong> · positive gamma, fade крайностей</span>
+        <span class="lvl-px spot">7553.68</span>
+        <span class="lvl-note"><strong>Диапазон 7495–7700</strong> · выше HVL, зона стабилизации</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag s">S1</span>
-        <span class="lvl-px">7563</span>
-        <span class="lvl-note">Ближняя поддержка · bearish trigger ниже</span>
+        <span class="lvl-px">7540</span>
+        <span class="lvl-note">0DTE Put Support · тактическая опора</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag brk">BRK</span>
-        <span class="lvl-px">7533</span>
-        <span class="lvl-note"><strong>Низ 0DTE move</strong> · пробой → ускорение к 7473</span>
+        <span class="lvl-px">7495</span>
+        <span class="lvl-note"><strong>HVL · точка перелома</strong> · ниже — режим переключается на ускорение вниз</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag s">S2</span>
-        <span class="lvl-px">7473</span>
-        <span class="lvl-note">Цель при пробое 7533</span>
+        <span class="lvl-px">7337</span>
+        <span class="lvl-note">Blindspot · цель при пробое 7495</span>
       </div>
     </div>
   </section>
 
-  <!-- BOTTOM ROW: Avoid + Calendar + Sectors -->
   <section class="bottom-row">
 
     <div class="card section-card">
@@ -1120,16 +570,12 @@ body { min-height: 100vh; }
       </div>
       <div>
         <div class="simple-row avoid-row">
-          <div class="avoid-time">14:10–14:25</div>
-          <div class="avoid-text">ADP · отчёт по найму в частном секторе</div>
+          <div class="avoid-time">15:30–16:30</div>
+          <div class="avoid-text">Первый час RTH без устойчивого потока · theta crush для 0DTE</div>
         </div>
         <div class="simple-row avoid-row">
-          <div class="avoid-time">15:55–16:10</div>
-          <div class="avoid-text">ISM Services + EIA crude · спайк волатильности</div>
-        </div>
-        <div class="simple-row avoid-row">
-          <div class="avoid-time">21:30–22:00</div>
-          <div class="avoid-text">Перед отчётом AVGO · вола в чипах</div>
+          <div class="avoid-time">—</div>
+          <div class="avoid-text">Жёстких макро-окон до открытия нет</div>
         </div>
       </div>
     </div>
@@ -1140,65 +586,63 @@ body { min-height: 100vh; }
         <div class="section-meta">CET</div>
       </div>
       <div>
-        <div class="simple-row cal-row"><span class="cal-time">14:15</span><span class="cal-event">ADP Employment</span><span class="cal-imp high">High</span></div>
-        <div class="simple-row cal-row"><span class="cal-time">16:00</span><span class="cal-event">ISM Services PMI</span><span class="cal-imp high">High</span></div>
-        <div class="simple-row cal-row"><span class="cal-time">16:00</span><span class="cal-event">S&P Global Services PMI</span><span class="cal-imp med">Med</span></div>
-        <div class="simple-row cal-row"><span class="cal-time">16:30</span><span class="cal-event">EIA Crude Inventories</span><span class="cal-imp med">Med</span></div>
-        <div class="simple-row cal-row"><span class="cal-time">AMC</span><span class="cal-event">AVGO earnings</span><span class="cal-imp high">High</span></div>
+        <div class="simple-row cal-row"><span class="cal-time">14:30</span><span class="cal-event">Initial Jobless Claims</span><span class="cal-imp med">Med</span></div>
+        <div class="simple-row cal-row"><span class="cal-time">AMC</span><span class="cal-event">DOCU earnings</span><span class="cal-imp med">Med</span></div>
+        <div class="simple-row cal-row"><span class="cal-time">AMC</span><span class="cal-event">LULU earnings</span><span class="cal-imp med">Med</span></div>
       </div>
     </div>
 
     <div class="card section-card">
       <div class="section-head">
-        <div class="section-title">Sectors</div>
-        <div class="section-meta">RS месяц · лидеры / слабые</div>
+        <div class="section-title">Sectors · месяц</div>
+        <div class="section-meta">RS к рынку</div>
       </div>
       <div>
-        <div class="simple-row sec-row"><span class="sec-tk">SMH</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:100%"></span></span><span class="sec-pct up">+18.61</span></div>
-        <div class="simple-row sec-row"><span class="sec-tk">XLK</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:92%"></span></span><span class="sec-pct up">+17.05</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">SMH</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:100%"></span></span><span class="sec-pct up">+20.82</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLK</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:77%"></span></span><span class="sec-pct up">+16.04</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLE</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:30%"></span></span><span class="sec-pct down">−6.19</span></div>
         <div class="sec-divider">— Слабые —</div>
-        <div class="simple-row sec-row"><span class="sec-tk">XLU</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:60%"></span></span><span class="sec-pct down">−11.09</span></div>
-        <div class="simple-row sec-row"><span class="sec-tk">XLP</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:44%"></span></span><span class="sec-pct down">−8.18</span></div>
-        <div class="simple-row sec-row"><span class="sec-tk">XLC</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:44%"></span></span><span class="sec-pct down">−8.10</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLP</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:32%"></span></span><span class="sec-pct down">−6.70</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLC</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:41%"></span></span><span class="sec-pct down">−8.51</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLU</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:52%"></span></span><span class="sec-pct down">−10.79</span></div>
       </div>
     </div>
 
   </section>
 
-  <!-- 0DTE FULL SCENARIOS -->
   <section class="scenarios">
     <div class="scenario-full bull">
       <div class="sc-head">
         <span class="sc-badge bull">↑ Scenario A</span>
       </div>
-      <div class="sc-name">Grind to wall</div>
-      <div class="sc-line"><span class="sc-line-key">Trigger</span><span class="sc-line-val"><strong>SPX &gt; 7650</strong> на объёме после ISM</span></div>
-      <div class="sc-line"><span class="sc-line-key">Target</span><span class="sc-line-val"><strong>7687 → 7700</strong> (Call Wall)</span></div>
-      <div class="sc-line"><span class="sc-line-key">Structure</span><span class="sc-line-val">Put credit spread 0DTE под 7563</span></div>
+      <div class="sc-name">Hold the Range</div>
+      <div class="sc-line"><span class="sc-line-key">Trigger</span><span class="sc-line-val">удержание над <strong>7540</strong> (0DTE Put Support)</span></div>
+      <div class="sc-line"><span class="sc-line-key">Target</span><span class="sc-line-val"><strong>7600 → 7625</strong></span></div>
+      <div class="sc-line"><span class="sc-line-key">Structure</span><span class="sc-line-val">put credit ниже 7495</span></div>
     </div>
 
     <div class="scenario-full bear">
       <div class="sc-head">
         <span class="sc-badge bear">↓ Scenario B</span>
       </div>
-      <div class="sc-name">Break the floor</div>
-      <div class="sc-line"><span class="sc-line-key">Trigger</span><span class="sc-line-val"><strong>SPX &lt; 7563</strong> после слабого ADP/ISM</span></div>
-      <div class="sc-line"><span class="sc-line-key">Target</span><span class="sc-line-val"><strong>7533 → 7473</strong></span></div>
-      <div class="sc-line"><span class="sc-line-key">Structure</span><span class="sc-line-val">Call credit spread 0DTE над 7687</span></div>
+      <div class="sc-name">Break the Floor</div>
+      <div class="sc-line"><span class="sc-line-key">Trigger</span><span class="sc-line-val">пробой <strong>7495</strong> HVL вниз</span></div>
+      <div class="sc-line"><span class="sc-line-key">Target</span><span class="sc-line-val"><strong>7440 → 7400</strong></span></div>
+      <div class="sc-line"><span class="sc-line-key">Structure</span><span class="sc-line-val">call credit над 7625</span></div>
     </div>
 
     <div class="scenario-full flat">
       <div class="sc-head">
         <span class="sc-badge flat">⊘ Avoid</span>
       </div>
-      <div class="sc-name">Stay flat</div>
-      <div class="sc-line"><span class="sc-line-key">Когда</span><span class="sc-line-val">Реакция на ADP/ISM в первые 30 мин · дождаться оседания</span></div>
-      <div class="sc-line"><span class="sc-line-key">Правило</span><span class="sc-line-val">Positive gamma · диапазон 7563–7700 · размер режу перед AVGO</span></div>
+      <div class="sc-name">Stay Flat</div>
+      <div class="sc-line"><span class="sc-line-key">Когда</span><span class="sc-line-val">зажатие 7540–7600 без направления</span></div>
+      <div class="sc-line"><span class="sc-line-key">Правило</span><span class="sc-line-val">позитивная гамма гасит рывки · среднеразворот, низкий потенциал тренда</span></div>
     </div>
   </section>
 
   <footer class="footer">
-    <div>Premarket Context Engine · v2.6.1 · Daily mode · 03.06.2026</div>
+    <div>Premarket Context Engine · v2.6.1 · Daily mode · 04.06.2026</div>
     <div class="disclaimer">Не является инвестиционной рекомендацией.</div>
   </footer>
 
