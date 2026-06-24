@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premarket Brief · 16.06.2026</title>
+<title>Premarket Brief · 24.06.2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -226,7 +226,7 @@ body { min-height: 100vh; }
   margin-top: 2px;
 }
 
-/* BIAS hero card — green like My Balance */
+/* BIAS hero card */
 .bias-card {
   background: linear-gradient(135deg, #14a36e 0%, #0e8b5d 100%);
   color: white;
@@ -427,6 +427,14 @@ body { min-height: 100vh; }
 }
 .focus-row:last-child { border-bottom: none; }
 .focus-row:hover { background: var(--surface-2); }
+
+.empty-row {
+  padding: 28px 24px;
+  text-align: center;
+  color: var(--ink-4);
+  font-size: 14px;
+  font-weight: 500;
+}
 
 .tk-block {
   display: flex;
@@ -827,7 +835,7 @@ body { min-height: 100vh; }
     </div>
     <div class="header-meta">
       <span class="live-pill"><span class="live-dot"></span>Pre-market live</span>
-      <span>10:18 CET</span>
+      <span>11:24 CET</span>
       <button class="share-btn">Share
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
       </button>
@@ -840,7 +848,7 @@ body { min-height: 100vh; }
       <h1>Overview</h1>
       <p>Структура сессии · что важно знать до открытия рынка</p>
     </div>
-    <div class="date-badge">📅 Вторник, 16 июня 2026 · Open in 5h 12m</div>
+    <div class="date-badge">📅 Среда, 24 июня 2026 · Open in 04h 06m</div>
   </div>
 
   <!-- HERO: 3 main cards -->
@@ -858,11 +866,11 @@ body { min-height: 100vh; }
         </div>
       </div>
       <div class="bias-value">
-        <div class="bias-word">Neutral</div>
-        <div class="bias-strength-pill">Low</div>
+        <div class="bias-word">Bearish</div>
+        <div class="bias-strength-pill">Medium</div>
       </div>
       <div class="bias-narrative">
-        Вчерашнее ралли на сделке США–Иран (<strong>SPX +1.7%</strong>) переваривается. Овернайт акции стоят — сентябрьский фьючерс <strong>+0.02%</strong>, Nasdaq +0.01%. Снижается только нефть (<strong>−1.8%</strong>). Тренд вверх (выше всех средних, VIX 16.2), но свежего импульса нет. <strong>ФРС завтра 20:00 CET</strong> — главный катализатор; сегодня день переваривания, размер режу под завтра.
+        Вчера SPX закрылся <strong>−1.44%</strong> (7472.79 → 7365.46), VIX вырос до <strong>19.49</strong>. Спот провалился ниже всех уровней MenthorQ — рынок в <strong>отрицательной гамме</strong>, движения усиливаются, а не гаснут. Премаркет SPY 735.2 держится у вчерашнего закрытия, без отскока. /ES несёт structural carry-премиум <strong>+81 пт</strong> над cash (день после ролла) — не overnight-сигнал.
       </div>
     </div>
 
@@ -878,11 +886,11 @@ body { min-height: 100vh; }
         </div>
       </div>
       <div class="risk-hero-list">
-        <div class="risk-hero-row"><span class="risk-hero-num">1</span><span><strong>US–Iran / Hormuz</strong> · двигатель ралли</span></div>
-        <div class="risk-hero-row"><span class="risk-hero-num">2</span><span><strong>Oil −1.8%</strong> · давит энергетику</span></div>
-        <div class="risk-hero-row"><span class="risk-hero-num">3</span><span><strong>AI / SpaceX</strong> · перегрев оценок</span></div>
-        <div class="risk-hero-row"><span class="risk-hero-num">4</span><span><strong>AAPL</strong> · расследование в Италии</span></div>
-        <div class="risk-hero-row"><span class="risk-hero-num">5</span><span><strong>FOMC завтра</strong> · 20:00 CET</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">1</span><span><strong>Иран / Ормуз</strong> · Сенат ограничил войну</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">2</span><span><strong>Китайские роботы</strong> · Lutnick / Commerce</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">3</span><span><strong>AI-регуляторика</strong> · Meta, Oracle 21k cuts</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">4</span><span><strong>Нефть / DOJ</strong> · проверка цен на бензин</span></div>
+        <div class="risk-hero-row"><span class="risk-hero-num">5</span><span><strong>Отрицательная гамма</strong> · ложные пробои</span></div>
       </div>
     </div>
 
@@ -900,15 +908,15 @@ body { min-height: 100vh; }
       <div class="scenario-mini">
         <div class="scenario-row">
           <div class="sc-arrow bull">↑</div>
-          <div class="sc-text">Hold &gt; <strong>7555</strong> → пробой <strong>7600</strong> Call Resistance</div>
+          <div class="sc-text"><strong>&gt; 7400</strong> → 7436 → 7490 HVL</div>
         </div>
         <div class="scenario-row">
           <div class="sc-arrow bear">↓</div>
-          <div class="sc-text">Break <strong>7550</strong> → target <strong>7500 / 7435</strong></div>
+          <div class="sc-text"><strong>&lt; 7360</strong> → 7300 → 7278 (1D Min)</div>
         </div>
         <div class="scenario-row">
           <div class="sc-arrow flat">⊘</div>
-          <div class="sc-text">Коробка <strong>7500–7600</strong> под FOMC — flat</div>
+          <div class="sc-text">Пила <strong>7360–7400</strong> до 16:00</div>
         </div>
       </div>
     </div>
@@ -919,117 +927,96 @@ body { min-height: 100vh; }
   <section class="macro-strip">
     <div class="macro-cell">
       <div class="macro-tk">ES (Sep)</div>
-      <div class="macro-val">7626.88</div>
-      <span class="macro-d flat">+0.02%</span>
+      <div class="macro-val">7446.75</div>
+      <div class="macro-d flat">—</div>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">NQ (Sep)</div>
-      <div class="macro-val">30,863</div>
-      <span class="macro-d flat">+0.01%</span>
+      <div class="macro-val">29813.75</div>
+      <div class="macro-d flat">—</div>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">VIX</div>
-      <div class="macro-val">16.20</div>
-      <span class="macro-d down">−8.37%</span>
+      <div class="macro-val">19.24</div>
+      <div class="macro-d down">−1.33%</div>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">DXY</div>
-      <div class="macro-val">99.66</div>
-      <span class="macro-d flat">−0.09%</span>
+      <div class="macro-val">101.61</div>
+      <div class="macro-d up">+0.20%</div>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">10Y</div>
-      <div class="macro-val">4.469%</div>
-      <span class="macro-d flat">prev cls</span>
+      <div class="macro-val">4.493</div>
+      <div class="macro-d up">+0.94%</div>
     </div>
     <div class="macro-cell">
-      <div class="macro-tk">WTI (Jul)</div>
-      <div class="macro-val">79.31</div>
-      <span class="macro-d down">−1.78%</span>
+      <div class="macro-tk">WTI</div>
+      <div class="macro-val">71.65</div>
+      <div class="macro-d flat">—</div>
     </div>
     <div class="macro-cell">
-      <div class="macro-tk">Gold (Aug)</div>
-      <div class="macro-val">4,356</div>
-      <span class="macro-d flat">+0.10%</span>
+      <div class="macro-tk">Gold (GLD)</div>
+      <div class="macro-val">374.09</div>
+      <div class="macro-d flat">—</div>
     </div>
     <div class="macro-cell">
       <div class="macro-tk">BTC</div>
-      <div class="macro-val">66,335</div>
-      <span class="macro-d flat">+0.07%</span>
+      <div class="macro-val">62 632</div>
+      <div class="macro-d down">−0.06%</div>
     </div>
   </section>
 
-  <!-- MAIN SPLIT: Focus + Risk full -->
+  <!-- MAIN SPLIT: In Focus + Risk Themes -->
   <section class="main-split">
 
     <div class="card section-card">
       <div class="section-head">
         <div class="section-title">In Focus</div>
-        <div class="section-meta">1 mover · low confidence</div>
+        <div class="section-meta">Premarket movers</div>
       </div>
-      <div>
-        <div class="focus-row">
-          <div class="tk-block">
-            <div class="tk-direction short">↓</div>
-            <div>
-              <div class="tk-name">ATRO</div>
-              <div class="tk-tag-mini short">Short</div>
-            </div>
-          </div>
-          <div class="tk-driver">Аэрокосмос/оборона · катализатор не найден · ликвидность низкая · IVR ≈ 53</div>
-          <div class="tk-pct down">−21.16%<span class="tk-pct-sub">premkt</span></div>
-        </div>
-        <div class="focus-row">
-          <div class="tk-block">
-            <div>
-              <div class="tk-name" style="font-size:15px; color:var(--ink-3); font-weight:600;">Свинг-кандидатов нет</div>
-            </div>
-          </div>
-          <div class="tk-driver">Заметных earnings-катализаторов в окне 7–45 DTE лента не дала — неделю задаёт FOMC</div>
-          <div class="tk-pct" style="color:var(--ink-4);">—</div>
-        </div>
-      </div>
+      <div class="empty-row">Premarket-скринер пуст до открытия US · get_premarket_movers недоступен</div>
     </div>
 
     <div class="card section-card">
       <div class="section-head">
         <div class="section-title">Risk Themes</div>
-        <div class="section-meta">5 · что важно держать в голове</div>
+        <div class="section-meta">5 · что ломает сетап</div>
       </div>
       <div class="risk-list">
         <div class="risk-item">
           <div class="risk-num">01</div>
           <div>
-            <div class="risk-title">US–Iran framework / Hormuz</div>
-            <div class="risk-desc">Двигатель вчерашнего ралли; Ормуз открыт. Срыв рамки развернёт риск быстро</div>
+            <div class="risk-title">Иран / Ормузский пролив</div>
+            <div class="risk-desc">Сенат проголосовал ограничить войну без согласия Конгресса. Нефть вниз, /CL около 71.6</div>
           </div>
         </div>
         <div class="risk-item">
           <div class="risk-num">02</div>
           <div>
-            <div class="risk-title">Падение нефти</div>
-            <div class="risk-desc">WTI −1.8% продолжает давить энергетику (XLE), помогает промышленности и транспорту</div>
+            <div class="risk-title">Китайские роботы / торговля</div>
+            <div class="risk-desc">Lutnick сигналит меры после обзора Commerce · давит на TSLA, MP, китайские ADR</div>
           </div>
         </div>
         <div class="risk-item">
           <div class="risk-num">03</div>
           <div>
-            <div class="risk-title">Перегрев AI / SpaceX</div>
-            <div class="risk-desc">Burry и Novogratz осторожны по оценкам; SPCX за день наторговал больше пяти крупнейших техов</div>
+            <div class="risk-title">AI-регуляторика</div>
+            <div class="risk-desc">Meta под давлением федерального теста моделей · Oracle режет 21 000 рабочих мест</div>
           </div>
         </div>
         <div class="risk-item">
           <div class="risk-num">04</div>
           <div>
-            <div class="risk-title">AAPL под расследованием</div>
-            <div class="risk-desc">Антимонопольное дело в Италии (DMA) — точечный негатив по бумаге</div>
+            <div class="risk-title">Нефть / DOJ</div>
+            <div class="risk-desc">Trump поручил DOJ проверить цены на бензин · давление на XOM/CVX</div>
           </div>
         </div>
         <div class="risk-item">
           <div class="risk-num">05</div>
           <div>
-            <div class="risk-title">FOMC в среду</div>
-            <div class="risk-desc">Решение по ставке + прогноз ставок (dot plot) — главное событие недели</div>
+            <div class="risk-title">GOOGL → Dow Jones</div>
+            <div class="risk-desc">Alphabet заменит Verizon в DJIA с 29 июня · структурный bid для GOOGL</div>
           </div>
         </div>
       </div>
@@ -1045,46 +1032,46 @@ body { min-height: 100vh; }
         <div class="section-meta">Карта поддержек, сопротивлений и триггеров</div>
       </div>
       <div class="spx-spot-block">
-        <div class="spx-spot-label">SPX cash</div>
-        <div class="spx-spot-val">7555.26</div>
-        <div class="spx-em">EM ±77.10 (±1.02%)</div>
+        <div class="spx-spot-label">SPX cash (last close)</div>
+        <div class="spx-spot-val">7365.46</div>
+        <div class="spx-em">EM ±89 (±1.21%) · vix_proxy</div>
       </div>
     </div>
     <div class="ladder">
       <div class="lvl-row">
         <span class="lvl-tag r">R3</span>
-        <span class="lvl-px">7700</span>
-        <span class="lvl-note">Расширенная цель при выходе над 7650</span>
+        <span class="lvl-px">7436</span>
+        <span class="lvl-note"><strong>1D Max</strong> · верх вчерашнего диапазона</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag r">R2</span>
-        <span class="lvl-px">7650</span>
-        <span class="lvl-note">Кластер GEX выше сопротивления</span>
+        <span class="lvl-px">7400</span>
+        <span class="lvl-note"><strong>Put Support</strong> · теперь работает как сопротивление сверху</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag r">R1</span>
-        <span class="lvl-px">7600</span>
-        <span class="lvl-note"><strong>Call Resistance</strong> · максимум прошлого дня 7608 · дилерское сопротивление</span>
+        <span class="lvl-px">7390</span>
+        <span class="lvl-note">Put Support 0DTE · первый барьер сверху</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag spot">Spot</span>
-        <span class="lvl-px spot">~7555</span>
-        <span class="lvl-note"><strong>Коробка 7500–7600</strong> · стена 7550 чуть ниже · положит. гамма</span>
+        <span class="lvl-px spot">7365.46</span>
+        <span class="lvl-note"><strong>Зона 7300–7400</strong> · спот в GEX-кластере 7360/7370</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag s">S1</span>
-        <span class="lvl-px">7500</span>
-        <span class="lvl-note">GEX 1 · триггер вниз ниже</span>
+        <span class="lvl-px">7360</span>
+        <span class="lvl-note">GEX-уровень · ближняя опора</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag brk">BRK</span>
-        <span class="lvl-px">7435</span>
-        <span class="lvl-note"><strong>Переключение гаммы</strong> (HVL 0DTE) → ускорение вниз</span>
+        <span class="lvl-px">7278</span>
+        <span class="lvl-note"><strong>1D Min</strong> · пробой → ускорение в отрицательной гамме</span>
       </div>
       <div class="lvl-row">
         <span class="lvl-tag s">S2</span>
-        <span class="lvl-px">7200</span>
-        <span class="lvl-note">Put Support · цель при глубоком пробое</span>
+        <span class="lvl-px">7300</span>
+        <span class="lvl-note">GEX1 · промежуточная опора по пути к 7278</span>
       </div>
     </div>
   </section>
@@ -1099,20 +1086,12 @@ body { min-height: 100vh; }
       </div>
       <div>
         <div class="simple-row avoid-row">
-          <div class="avoid-time">15:30–16:00</div>
-          <div class="avoid-text">Волатильность открытия · не фейдить вслепую</div>
+          <div class="avoid-time">16:00</div>
+          <div class="avoid-text">New Home Sales · ±5 мин</div>
         </div>
         <div class="simple-row avoid-row">
-          <div class="avoid-time">Сегодня</div>
-          <div class="avoid-text">Набор риска под FOMC завтра 20:00 — только с планом</div>
-        </div>
-        <div class="simple-row avoid-row">
-          <div class="avoid-time">до 15:50</div>
-          <div class="avoid-text">Уровни MenthorQ от прошлой сессии · ждать обновления</div>
-        </div>
-        <div class="simple-row avoid-row">
-          <div class="avoid-time">14:30</div>
-          <div class="avoid-text">Остаточные релизы 8:30 ET</div>
+          <div class="avoid-time">16:30</div>
+          <div class="avoid-text">EIA нефть · для энергетики и /CL · ±5 мин</div>
         </div>
       </div>
     </div>
@@ -1123,10 +1102,9 @@ body { min-height: 100vh; }
         <div class="section-meta">CET</div>
       </div>
       <div>
-        <div class="simple-row cal-row"><span class="cal-time">14:30</span><span class="cal-event">Empire State Manuf. (вышел)</span><span class="cal-imp med">Med</span></div>
-        <div class="simple-row cal-row"><span class="cal-time">14:30</span><span class="cal-event">Import/Export Prices</span><span class="cal-imp med">Med</span></div>
-        <div class="simple-row cal-row"><span class="cal-time">16:00</span><span class="cal-event">NAHB Housing Index</span><span class="cal-imp low">Low</span></div>
-        <div class="simple-row cal-row"><span class="cal-time">—</span><span class="cal-event">FOMC день 1 (без релиза)</span><span class="cal-imp low">Info</span></div>
+        <div class="simple-row cal-row"><span class="cal-time">13:00</span><span class="cal-event">MBA ипотечные заявки</span><span class="cal-imp low">Low</span></div>
+        <div class="simple-row cal-row"><span class="cal-time">16:00</span><span class="cal-event">New Home Sales (май)</span><span class="cal-imp med">Med</span></div>
+        <div class="simple-row cal-row"><span class="cal-time">16:30</span><span class="cal-event">EIA Crude Inventories</span><span class="cal-imp med">Med</span></div>
       </div>
     </div>
 
@@ -1136,13 +1114,13 @@ body { min-height: 100vh; }
         <div class="section-meta">Top / Bottom 3</div>
       </div>
       <div>
-        <div class="simple-row sec-row"><span class="sec-tk">GDX</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:100%"></span></span><span class="sec-pct up">+8.39</span></div>
-        <div class="simple-row sec-row"><span class="sec-tk">SMH</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:98%"></span></span><span class="sec-pct up">+8.18</span></div>
-        <div class="simple-row sec-row"><span class="sec-tk">XLB</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:61%"></span></span><span class="sec-pct up">+5.08</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLU</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:33%"></span></span><span class="sec-pct up">+1.38</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLF</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:23%"></span></span><span class="sec-pct up">+0.95</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLRE</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:2%"></span></span><span class="sec-pct up">+0.09</span></div>
         <div class="sec-divider">— Bottom —</div>
-        <div class="simple-row sec-row"><span class="sec-tk">XLE</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:57%"></span></span><span class="sec-pct down">−4.77</span></div>
-        <div class="simple-row sec-row"><span class="sec-tk">XLV</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:2%"></span></span><span class="sec-pct up">+0.16</span></div>
-        <div class="simple-row sec-row"><span class="sec-tk">XLC</span><span class="sec-bar"><span class="sec-bar-fill up" style="width:12%"></span></span><span class="sec-pct up">+0.99</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLC</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:100%"></span></span><span class="sec-pct down">−4.14</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLY</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:93%"></span></span><span class="sec-pct down">−3.87</span></div>
+        <div class="simple-row sec-row"><span class="sec-tk">XLK</span><span class="sec-bar"><span class="sec-bar-fill down" style="width:93%"></span></span><span class="sec-pct down">−3.85</span></div>
       </div>
     </div>
 
@@ -1154,20 +1132,20 @@ body { min-height: 100vh; }
       <div class="sc-head">
         <span class="sc-badge bull">↑ Scenario A</span>
       </div>
-      <div class="sc-name">Пробой 7600</div>
-      <div class="sc-line"><span class="sc-line-key">Trigger</span><span class="sc-line-val">удержание &gt; <strong>7555</strong> и пробой <strong>7600</strong></span></div>
-      <div class="sc-line"><span class="sc-line-key">Target</span><span class="sc-line-val"><strong>7600</strong> (Call Res / 1D Max 7608) → <strong>7650</strong></span></div>
-      <div class="sc-line"><span class="sc-line-key">Structure</span><span class="sc-line-val">put credit ниже 7500 · положит. гамма, грайнд</span></div>
+      <div class="sc-name">Возврат над 7400</div>
+      <div class="sc-line"><span class="sc-line-key">Trigger</span><span class="sc-line-val"><strong>SPX &gt; 7400</strong> (Put Support обратно как опора)</span></div>
+      <div class="sc-line"><span class="sc-line-key">Target</span><span class="sc-line-val"><strong>7436 → 7490</strong> (HVL 0DTE)</span></div>
+      <div class="sc-line"><span class="sc-line-key">Structure</span><span class="sc-line-val">Range-логика только выше 7490</span></div>
     </div>
 
     <div class="scenario-full bear">
       <div class="sc-head">
         <span class="sc-badge bear">↓ Scenario B</span>
       </div>
-      <div class="sc-name">Потеря стены</div>
-      <div class="sc-line"><span class="sc-line-key">Trigger</span><span class="sc-line-val">SPX &lt; <strong>7550</strong> (Gamma Wall)</span></div>
-      <div class="sc-line"><span class="sc-line-key">Target</span><span class="sc-line-val"><strong>7500</strong> → <strong>7435</strong> (переключение гаммы)</span></div>
-      <div class="sc-line"><span class="sc-line-key">Structure</span><span class="sc-line-val">call credit над 7600</span></div>
+      <div class="sc-name">Пробой пола</div>
+      <div class="sc-line"><span class="sc-line-key">Trigger</span><span class="sc-line-val"><strong>SPX &lt; 7360 / 7300</strong></span></div>
+      <div class="sc-line"><span class="sc-line-key">Target</span><span class="sc-line-val"><strong>7278</strong> (1D Min)</span></div>
+      <div class="sc-line"><span class="sc-line-key">Structure</span><span class="sc-line-val">Трендовый режим, движение усиливается дилерами</span></div>
     </div>
 
     <div class="scenario-full flat">
@@ -1175,13 +1153,13 @@ body { min-height: 100vh; }
         <span class="sc-badge flat">⊘ Avoid</span>
       </div>
       <div class="sc-name">Stay Flat</div>
-      <div class="sc-line"><span class="sc-line-key">Когда</span><span class="sc-line-val">Коробка 7500–7600 под FOMC завтра · плоский овернайт</span></div>
-      <div class="sc-line"><span class="sc-line-key">Правило</span><span class="sc-line-val">Положит. гамма — возврат к среднему; края не торговать без подтверждения после 15:50</span></div>
+      <div class="sc-line"><span class="sc-line-key">Когда</span><span class="sc-line-val">Пила в зоне 7360–7400 до New Home Sales 16:00</span></div>
+      <div class="sc-line"><span class="sc-line-key">Правило</span><span class="sc-line-val">Отрицательная гамма = ложные пробои · ATR elevated, шире стопы</span></div>
     </div>
   </section>
 
   <footer class="footer">
-    <div>Premarket Context Engine · v2.9.1 · Daily mode · 16.06.2026</div>
+    <div>Premarket Context Engine · v2.9.1 · Daily mode · 2026-06-24</div>
     <div class="disclaimer">Не является инвестиционной рекомендацией.</div>
   </footer>
 
